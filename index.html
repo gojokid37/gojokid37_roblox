@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>GOJOKID37 | Dueling Grounds</title>
+<title>GOJOKID37 | Duelling Grounds</title>
 
 <meta name="description"
-content="GOJOKID37 Dueling Grounds website — tips, combat knowledge, secrets and competition.">
+content="GOJOKID37 Duelling Grounds website. Tips, strategies, movement and competition.">
 
 <style>
 
@@ -23,7 +23,7 @@ html {
 }
 
 body {
-    background: #07070b;
+    background: #050509;
     color: white;
 }
 
@@ -38,15 +38,16 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     background: rgba(0,0,0,0.85);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255,255,255,0.12);
+
+    border-bottom: 1px solid #222;
 }
 
 .logo {
     font-size: 25px;
     font-weight: bold;
-    letter-spacing: 2px;
 }
 
 .logo span {
@@ -58,34 +59,49 @@ nav a {
     text-decoration: none;
     margin-left: 22px;
     font-weight: bold;
-    transition: 0.2s;
 }
 
 nav a:hover {
     color: #00aaff;
 }
 
+/* GENERAL */
+
+section {
+    padding: 100px 8%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 42px;
+    margin-bottom: 25px;
+}
+
+section > p {
+    max-width: 850px;
+    margin: auto;
+    color: #bbb;
+    line-height: 1.7;
+}
+
 /* HERO */
 
 .hero {
     min-height: 100vh;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     text-align: center;
-    padding: 120px 20px;
 
     background:
-        linear-gradient(
-            rgba(0,0,0,0.45),
-            rgba(0,0,0,0.85)
-        ),
-        url("https://tr.rbxcdn.com/180DAY-8a35d3bcff438c297ca6858f1f0935ce/768/432/Image/Webp/noFilter");
+        linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.8)),
+        url("https://progameguides.com/wp-content/uploads/2025/10/Dueling-Grounds-Ranked.jpg?resize=1200%2C675");
 
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
 }
 
 .hero h1 {
@@ -101,205 +117,212 @@ nav a:hover {
 .hero p {
     font-size: 22px;
     color: #ddd;
-    margin: 20px 0 35px;
+    margin: 15px 0 35px;
 }
 
 .button {
     display: inline-block;
-    padding: 16px 30px;
+    padding: 17px 35px;
+
     background: #00aaff;
     color: white;
+
     text-decoration: none;
     border-radius: 10px;
+
     font-weight: bold;
-    box-shadow: 0 0 25px rgba(0,170,255,0.4);
-    transition: 0.25s;
+
+    box-shadow: 0 0 25px rgba(0,170,255,.35);
+
+    transition: .25s;
 }
 
 .button:hover {
-    transform: scale(1.08);
+    transform: scale(1.07);
     background: #0088cc;
-    box-shadow: 0 0 40px rgba(0,170,255,0.8);
 }
 
-/* GENERAL SECTIONS */
+/* IMAGE SECTIONS */
 
-section {
-    padding: 100px 8%;
-    text-align: center;
-}
+.visual {
+    min-height: 500px;
 
-section:nth-child(even) {
-    background: #0b0b12;
-}
-
-section h2 {
-    font-size: 45px;
-    margin-bottom: 20px;
-}
-
-.section-intro {
-    max-width: 800px;
-    margin: 0 auto 50px;
-    color: #bdbdc9;
-    line-height: 1.8;
-    font-size: 18px;
-}
-
-/* IMAGE */
-
-.section-image {
-    width: 100%;
-    max-width: 1000px;
-    height: 480px;
-    object-fit: cover;
-    border-radius: 20px;
-    display: block;
-    margin: 35px auto;
-    box-shadow: 0 15px 50px rgba(0,0,0,0.6);
-    border: 1px solid rgba(255,255,255,0.12);
-    transition: 0.3s;
-}
-
-.section-image:hover {
-    transform: scale(1.015);
-}
-
-/* CARDS */
-
-.cards {
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
+
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
 }
 
-.card {
-    width: 310px;
-    padding: 30px;
-    background: #15151e;
-    border: 1px solid #29293a;
-    border-radius: 18px;
-    transition: 0.25s;
+.visual::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.85)
+    );
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    border-color: #00aaff;
-    box-shadow: 0 15px 35px rgba(0,170,255,0.15);
+.visual-content {
+    position: relative;
+    max-width: 850px;
+    z-index: 2;
 }
 
-.card h3 {
-    font-size: 25px;
-    margin-bottom: 15px;
+.visual-content h2 {
+    font-size: 50px;
+    text-shadow: 0 4px 15px black;
 }
 
-.card p {
-    color: #c4c4cf;
-    line-height: 1.7;
+.visual-content p {
+    font-size: 19px;
+    line-height: 1.8;
+    color: #ddd;
 }
 
-/* COMBAT */
+/* DIFFERENT VISUAL BACKGROUNDS */
 
-.combat-box {
-    max-width: 1100px;
-    margin: auto;
+.combat {
+    background-image:
+    url("https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1600&q=80");
+}
+
+.parry {
+    background-image:
+    url("https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1600&q=80");
+}
+
+.movement {
+    background-image:
+    url("https://images.unsplash.com/photo-1560253023-3ec5d502959f?auto=format&fit=crop&w=1600&q=80");
+}
+
+.jumping {
+    background-image:
+    url("https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=1600&q=80");
+}
+
+.ultimate {
+    background-image:
+    url("https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1600&q=80");
+}
+
+.strategy {
+    background-image:
+    url("https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=1600&q=80");
+}
+
+.beginner {
+    background-image:
+    url("https://images.unsplash.com/photo-1605901309584-818e25960a8f?auto=format&fit=crop&w=1600&q=80");
+}
+
+.competition {
+    background-image:
+    url("https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?auto=format&fit=crop&w=1600&q=80");
 }
 
 /* TIPS */
 
-.tip {
-    max-width: 900px;
-    margin: 25px auto;
-    padding: 28px;
-    text-align: left;
-    background: #12121a;
-    border-left: 5px solid #00aaff;
-    border-radius: 12px;
+#tips {
+    background: #0a0a11;
 }
 
-.tip h3 {
-    font-size: 25px;
-    margin-bottom: 10px;
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 45px;
 }
 
-.tip p {
-    color: #c8c8d2;
+.card {
+    width: 290px;
+    padding: 30px;
+
+    background: #15151f;
+
+    border: 1px solid #29293a;
+    border-radius: 15px;
+
+    transition: .25s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #00aaff;
+
+    box-shadow: 0 10px 30px rgba(0,170,255,.15);
+}
+
+.card h3 {
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #bbb;
     line-height: 1.7;
 }
 
-/* ADVANCED */
+/* SECRETS */
 
-.advanced {
-    max-width: 1000px;
-    margin: auto;
-    padding: 45px;
-    background: linear-gradient(135deg,#11111a,#171725);
-    border-radius: 20px;
-    border: 1px solid #29293a;
+#secrets {
+    background: #08080e;
 }
 
-.advanced p {
-    color: #ccc;
-    line-height: 1.9;
-    margin: 15px 0;
-    font-size: 18px;
-}
-
-/* CONTROLS */
-
-.controls {
+.secret {
     max-width: 900px;
-    margin: 40px auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
-    gap: 15px;
+    margin: 25px auto;
+
+    padding: 25px;
+
+    background: #11111a;
+    border-left: 4px solid #00aaff;
+
+    text-align: left;
 }
 
-.control {
-    background: #15151e;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #29293a;
+.secret h3 {
+    margin-bottom: 10px;
 }
 
-.control strong {
-    display: block;
-    color: #00aaff;
-    font-size: 20px;
-    margin-bottom: 8px;
+.secret p {
+    color: #ccc;
+    line-height: 1.7;
 }
 
 /* COMPETE */
 
-.compete {
+#compete {
     min-height: 650px;
+
+    background:
+        linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.85)),
+        url("https://progameguides.com/wp-content/uploads/2025/10/Dueling-Grounds-Ranked.jpg?resize=1200%2C675");
+
+    background-size: cover;
+    background-position: center;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    background:
-        linear-gradient(
-            rgba(0,0,0,0.45),
-            rgba(0,0,0,0.85)
-        ),
-        url("https://tr.rbxcdn.com/180DAY-c52aa9a525294bec9e700e60d9487be7/768/432/Image/Webp/noFilter");
-
-    background-size: cover;
-    background-position: center;
 }
 
-.compete h2 {
+#compete h2 {
     font-size: 60px;
-    text-shadow: 0 5px 25px black;
 }
 
-.compete p {
+#compete p {
     max-width: 700px;
+    margin-bottom: 35px;
     font-size: 20px;
     color: #ddd;
-    margin: 20px 0 35px;
 }
 
 /* FOOTER */
@@ -307,7 +330,8 @@ section h2 {
 footer {
     padding: 35px;
     text-align: center;
-    background: #050507;
+
+    background: #030305;
     color: #777;
 }
 
@@ -328,15 +352,15 @@ footer {
     }
 
     section h2 {
-        font-size: 35px;
+        font-size: 34px;
     }
 
-    .section-image {
-        height: 300px;
+    .visual-content h2 {
+        font-size: 38px;
     }
 
-    .compete h2 {
-        font-size: 40px;
+    .card {
+        width: 100%;
     }
 }
 
@@ -349,214 +373,243 @@ footer {
 
 <header>
 
-    <div class="logo">
-        GOJO<span>KID37</span>
-    </div>
+<div class="logo">
+GOJO<span>KID37</span>
+</div>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#combat">Combat</a>
-        <a href="#tips">Tips</a>
-        <a href="#secrets">Secrets</a>
-        <a href="#compete">Compete</a>
-    </nav>
+<nav>
+<a href="#about">About</a>
+<a href="#combat">Combat</a>
+<a href="#tips">Tips</a>
+<a href="#secrets">Secrets</a>
+<a href="#compete">Compete</a>
+</nav>
 
 </header>
 
 
 <!-- HERO -->
 
-<section class="hero">
+<section class="hero" id="about">
 
-    <h1>
-        GOJO<span>KID37</span>
-    </h1>
+<h1>
+GOJO<span>KID37</span>
+</h1>
 
-    <p>
-        DUELING GROUNDS • PLAYER • COMPETITOR
-    </p>
+<p>
+DUELLING GROUNDS • PLAYER • COMPETITOR
+</p>
 
-    <a
-        class="button"
-        href="https://www.roblox.com/games/94217045453265/Dueling-Grounds"
-        target="_blank">
-        🎮 PLAY DUELING GROUNDS
-    </a>
+<a
+class="button"
+href="https://www.roblox.com/home"
+target="_blank">
 
-</section>
+🎮 PLAY DUELLING GROUNDS
 
-
-<!-- ABOUT -->
-
-<section id="about">
-
-    <h2>⚔️ Welcome to the Arena</h2>
-
-    <p class="section-intro">
-        Think you know Dueling Grounds? Think again.
-        Timing, movement, reactions and reading your opponent
-        can completely change how a fight goes.
-    </p>
-
-    <img
-        class="section-image"
-        src="https://static.deltiasgaming.com/2025/11/RobloxScreenShot20251123_113452896.png"
-        alt="Dueling Grounds gameplay">
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>⚔️ Combat</h3>
-            <p>
-                Learn how attacks, defense, movement and
-                timing work together during a fight.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>🧠 Mind Games</h3>
-            <p>
-                Fighting isn't only about reactions.
-                Reading patterns can give you an advantage.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>🔥 Competition</h3>
-            <p>
-                Every opponent gives you another chance
-                to learn something new.
-            </p>
-        </div>
-
-    </div>
+</a>
 
 </section>
 
 
 <!-- COMBAT -->
 
-<section id="combat">
+<section class="visual combat" id="combat">
 
-    <div class="combat-box">
+<div class="visual-content">
 
-        <h2>⚔️ Combat</h2>
+<h2>⚔️ COMBAT</h2>
 
-        <p class="section-intro">
-            Good players don't simply press buttons quickly.
-            They understand spacing, timing and when to attack.
-        </p>
+<p>
+Winning isn't only about attacking.
+Learn how to combine offense, defense,
+movement and timing to become harder to predict.
+</p>
 
-        <img
-            class="section-image"
-            src="https://tr.rbxcdn.com/180DAY-a718f9006fb2aa732345d7839ad722d4/768/432/Image/Webp/noFilter"
-            alt="Dueling Grounds combat">
-
-        <div class="cards">
-
-            <div class="card">
-                <h3>🎯 Timing</h3>
-                <p>
-                    Don't rush every action. Waiting for the
-                    right moment can completely change an exchange.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>🏃 Movement</h3>
-                <p>
-                    Keep your movement unpredictable instead
-                    of always moving in the same pattern.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>🧠 Awareness</h3>
-                <p>
-                    Pay attention to what your opponent does
-                    repeatedly and adapt.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- THINGS YOU MIGHT NOT KNOW -->
+<!-- PARRY -->
+
+<section class="visual parry">
+
+<div class="visual-content">
+
+<h2>🛡️ PARRY</h2>
+
+<p>
+Did you know? You don't need to panic-click.
+A well-timed parry can completely change the
+momentum of a fight. Watch your opponent
+and react to the attack.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- MOVEMENT -->
+
+<section class="visual movement">
+
+<div class="visual-content">
+
+<h2>🏃 MOVEMENT</h2>
+
+<p>
+Movement isn't just about running away.
+Changing direction and staying unpredictable
+can make it harder for your opponent to know
+what you're going to do next.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- JUMPING -->
+
+<section class="visual jumping">
+
+<div class="visual-content">
+
+<h2>🦘 JUMPING</h2>
+
+<p>
+Did you know? Jumping can sometimes help
+you avoid attacks and change your movement
+pattern. Don't make your movement predictable.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ULTIMATE -->
+
+<section class="visual ultimate">
+
+<div class="visual-content">
+
+<h2>⚡ ULTIMATES</h2>
+
+<p>
+Don't automatically panic when an opponent
+uses a powerful move. Stay aware, look for
+patterns and use good timing when defending.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- STRATEGY -->
+
+<section class="visual strategy">
+
+<div class="visual-content">
+
+<h2>🧠 STRATEGY</h2>
+
+<p>
+The best players don't only react.
+They observe habits, predict patterns and
+change their strategy when their opponent
+starts adapting.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- TIPS -->
 
 <section id="tips">
 
-    <h2>🧠 Things You Might Not Know</h2>
+<h2>🔥 THINGS YOU MIGHT NOT KNOW</h2>
 
-    <p class="section-intro">
-        Small details can make a huge difference.
-    </p>
+<p>
+Small details can make a huge difference.
+</p>
 
-    <img
-        class="section-image"
-        src="https://tr.rbxcdn.com/180DAY-8a35d3bcff438c297ca6858f1f0935ce/768/432/Image/Webp/noFilter"
-        alt="Dueling Grounds arena">
+<div class="cards">
 
-    <div class="tip">
+<div class="card">
+<h3>🛡️ Parry Timing</h3>
+<p>
+Watch the opponent instead of randomly
+pressing the parry button. Timing matters.
+</p>
+</div>
 
-        <h3>🛡️ Did You Know? — Parry Timing</h3>
+<div class="card">
+<h3>🦘 Jumping</h3>
+<p>
+Jumping can change your movement and
+make certain attacks harder to land.
+</p>
+</div>
 
-        <p>
-            A parry is about timing, not simply pressing the
-            button as quickly as possible. Watch your opponent
-            and react to their attack.
-        </p>
+<div class="card">
+<h3>🎯 Prediction</h3>
+<p>
+Experienced players don't only react.
+They try to predict what happens next.
+</p>
+</div>
 
-    </div>
+<div class="card">
+<h3>⏱️ Patience</h3>
+<p>
+Sometimes waiting is better than rushing
+into an attack.
+</p>
+</div>
 
-    <div class="tip">
+<div class="card">
+<h3>🏃 Movement</h3>
+<p>
+Don't stay in one predictable position.
+Keep your movement varied.
+</p>
+</div>
 
-        <h3>🦘 Did You Know? — Jumping</h3>
+<div class="card">
+<h3>🔥 Adaptation</h3>
+<p>
+If something isn't working, change your
+strategy instead of repeating it.
+</p>
+</div>
 
-        <p>
-            Jumping can change your position and help make
-            your movement less predictable.
-        </p>
+</div>
 
-    </div>
+</section>
 
-    <div class="tip">
 
-        <h3>⚡ Did You Know? — Ultimates</h3>
+<!-- BEGINNER -->
 
-        <p>
-            Powerful abilities still require good timing.
-            Don't automatically assume that using one guarantees
-            that it will connect.
-        </p>
+<section class="visual beginner">
 
-    </div>
+<div class="visual-content">
 
-    <div class="tip">
+<h2>🎮 BEGINNER MISTAKES</h2>
 
-        <h3>🏃 Did You Know? — Movement</h3>
+<p>
+Avoid panic attacking, predictable movement,
+rushing decisions and refusing to adapt.
+Learning from mistakes is part of becoming
+a better player.
+</p>
 
-        <p>
-            Moving unpredictably can make it harder for another
-            player to know exactly what you're going to do next.
-        </p>
-
-    </div>
-
-    <div class="tip">
-
-        <h3>🎯 Did You Know? — Prediction</h3>
-
-        <p>
-            Experienced players don't only react to what happens.
-            They start predicting what their opponent is likely
-            to do next.
-        </p>
-
-    </div>
+</div>
 
 </section>
 
@@ -565,183 +618,94 @@ footer {
 
 <section id="secrets">
 
-    <h2>🔥 Advanced Knowledge</h2>
+<h2>🧠 ADVANCED KNOWLEDGE</h2>
 
-    <p class="section-intro">
-        DON'T JUST FIGHT — READ YOUR OPPONENT.
-    </p>
+<div class="secret">
 
-    <img
-        class="section-image"
-        src="https://pbs.twimg.com/amplify_video_thumb/1929590945730752512/img/BS56NbXTgK-z8alh.jpg"
-        alt="Dueling Grounds arena gameplay">
+<h3>👀 READ YOUR OPPONENT</h3>
 
-    <div class="advanced">
+<p>
+If someone repeatedly attacks immediately
+after getting close, expect it.
+</p>
 
-        <p>
-            If someone repeatedly attacks immediately after
-            getting close, expect it.
-        </p>
+</div>
 
-        <p>
-            If someone repeatedly moves in the same direction,
-            remember the pattern.
-        </p>
+<div class="secret">
 
-        <p>
-            If an opponent constantly waits for you to attack,
-            don't always give them the same opportunity.
-        </p>
+<h3>🔄 WATCH THEIR HABITS</h3>
 
-        <p>
-            If your strategy stops working, adapt instead of
-            repeating the exact same thing.
-        </p>
+<p>
+If an opponent always moves or dodges
+the same way, remember it and adjust.
+</p>
 
-        <p>
-            The strongest advantage isn't always speed.
-            Sometimes it's knowing what the other player
-            is likely to do before they do it.
-        </p>
+</div>
 
-    </div>
+<div class="secret">
 
-</section>
+<h3>🧩 DON'T BE PREDICTABLE</h3>
 
+<p>
+If your opponent has figured out your pattern,
+change your approach.
+</p>
 
-<!-- CONTROLS -->
+</div>
 
-<section>
+<div class="secret">
 
-    <h2>🎮 Quick Controls</h2>
+<h3>🧠 THINK AHEAD</h3>
 
-    <p class="section-intro">
-        Know your controls before entering a serious match.
-    </p>
+<p>
+The strongest advantage isn't always speed.
+Sometimes it is knowing what your opponent
+is likely to do before they do it.
+</p>
 
-    <img
-        class="section-image"
-        src="https://tr.rbxcdn.com/180DAY-c52aa9a525294bec9e700e60d9487be7/768/432/Image/Webp/noFilter"
-        alt="Dueling Grounds gameplay">
-
-    <div class="controls">
-
-        <div class="control">
-            <strong>M1</strong>
-            Light Attack
-        </div>
-
-        <div class="control">
-            <strong>M2</strong>
-            Heavy Attack
-        </div>
-
-        <div class="control">
-            <strong>F</strong>
-            Parry / Block
-        </div>
-
-        <div class="control">
-            <strong>Q / SHIFT</strong>
-            Dodge
-        </div>
-
-        <div class="control">
-            <strong>SPACE</strong>
-            Jump
-        </div>
-
-        <div class="control">
-            <strong>T</strong>
-            Lock Target
-        </div>
-
-        <div class="control">
-            <strong>CTRL</strong>
-            Mouse Lock
-        </div>
-
-        <div class="control">
-            <strong>R</strong>
-            Ultimate
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- BEGINNER MISTAKES -->
+<!-- COMPETITION -->
 
-<section>
+<section class="visual competition">
 
-    <h2>🎮 Beginner Mistakes</h2>
+<div class="visual-content">
 
-    <p class="section-intro">
-        Avoid these mistakes and you'll already be thinking
-        differently from a beginner.
-    </p>
+<h2>🏆 COMPETE</h2>
 
-    <img
-        class="section-image"
-        src="https://tr.rbxcdn.com/180DAY-c52aa9a525294bec9e700e60d9487be7/768/432/Image/Webp/noFilter"
-        alt="Dueling Grounds battle">
+<p>
+Think you're ready?
+Step into Duelling Grounds and test
+your timing, movement and strategy.
+</p>
 
-    <div class="cards">
-
-        <div class="card">
-            <h3>❌ Panic Attacking</h3>
-            <p>
-                Constantly attacking can make your actions
-                predictable.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>❌ Ignoring Movement</h3>
-            <p>
-                Standing in one predictable position can make
-                it easier for your opponent to react.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>❌ No Adaptation</h3>
-            <p>
-                If something isn't working, change your approach.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>❌ Rushing</h3>
-            <p>
-                A rushed decision can turn a good situation
-                into a bad one.
-            </p>
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
 <!-- FINAL -->
 
-<section id="compete" class="compete">
+<section id="compete">
 
-    <h2>🏆 COMPETE WITH GOJOKID37</h2>
+<h2>🏆 COMPETE WITH GOJOKID37</h2>
 
-    <p>
-        You think you're ready?
-        Step into Dueling Grounds and prove it.
-    </p>
+<p>
+You think you know Duelling Grounds?
+Think again. Step into the arena and prove it.
+</p>
 
-    <a
-        class="button"
-        href="https://www.roblox.com/games/94217045453265/Dueling-Grounds"
-        target="_blank">
-        ⚔️ COMPETE WITH GOJOKID37
-    </a>
+<a
+class="button"
+href="https://www.roblox.com/home"
+target="_blank">
+
+⚔️ COMPETE WITH GOJOKID37
+
+</a>
 
 </section>
 
@@ -750,7 +714,7 @@ footer {
 
 <footer>
 
-    © 2026 Gojokid37 • Dueling Grounds Fan Website
+© 2026 GOJOKID37 • Duelling Grounds Fan Website
 
 </footer>
 
