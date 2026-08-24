@@ -7,8 +7,6 @@
 
 <title>Gojokid37 | Duelling Grounds</title>
 
-<meta name="description" content="Gojokid37 Duelling Grounds website. Tips, tricks, gameplay and more.">
-
 <style>
 * {
     margin: 0;
@@ -35,9 +33,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(0,0,0,.85);
+    background: rgba(0,0,0,.88);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255,255,255,.12);
+    border-bottom: 1px solid #222;
 }
 
 .logo {
@@ -70,7 +68,7 @@ nav a:hover {
     text-align: center;
 
     background:
-        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.82)),
+        linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.85)),
         url("https://progameguides.com/wp-content/uploads/2025/10/Dueling-Grounds-Ranked.jpg?resize=1200%2C675");
 
     background-size: cover;
@@ -90,7 +88,6 @@ nav a:hover {
 .hero p {
     margin: 20px 0 35px;
     font-size: 22px;
-    color: #ddd;
 }
 
 .button {
@@ -102,7 +99,6 @@ nav a:hover {
     border-radius: 10px;
     font-weight: bold;
     transition: .25s;
-    box-shadow: 0 0 25px rgba(0,170,255,.35);
 }
 
 .button:hover {
@@ -117,14 +113,27 @@ section {
 
 section h2 {
     font-size: 42px;
-    margin-bottom: 45px;
+    margin-bottom: 25px;
 }
 
 .subtitle {
     max-width: 850px;
-    margin: -25px auto 45px;
+    margin: 0 auto 45px;
     color: #aaa;
     line-height: 1.7;
+}
+
+.image-box {
+    max-width: 950px;
+    margin: 0 auto 45px;
+}
+
+.image-box img {
+    width: 100%;
+    display: block;
+    border-radius: 18px;
+    border: 1px solid #29293a;
+    box-shadow: 0 15px 45px rgba(0,0,0,.5);
 }
 
 .cards {
@@ -135,23 +144,32 @@ section h2 {
 }
 
 .card {
-    width: 300px;
-    padding: 30px;
+    width: 310px;
+    overflow: hidden;
     background: #14141c;
     border: 1px solid #29293a;
-    border-radius: 15px;
+    border-radius: 16px;
     transition: .25s;
 }
 
 .card:hover {
     transform: translateY(-8px);
     border-color: #00aaff;
-    box-shadow: 0 10px 35px rgba(0,170,255,.15);
+}
+
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 25px;
 }
 
 .card h3 {
     font-size: 23px;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
 }
 
 .card p {
@@ -159,21 +177,11 @@ section h2 {
     line-height: 1.7;
 }
 
-.tip {
-    border-left: 4px solid #00aaff;
-    text-align: left;
-}
-
-.tip strong {
-    color: #00aaff;
-}
-
 .feature {
-    width: 100%;
     max-width: 1000px;
     margin: auto;
     padding: 40px;
-    background: linear-gradient(135deg,#101018,#181824);
+    background: #111119;
     border-radius: 20px;
     border: 1px solid #29293a;
 }
@@ -190,12 +198,12 @@ section h2 {
     margin-bottom: 20px;
 }
 
-.warning {
-    color: #ffcc00;
+.highlight {
+    color: #00aaff;
 }
 
 footer {
-    padding: 35px;
+    padding: 40px;
     text-align: center;
     background: #050508;
     color: #777;
@@ -225,17 +233,23 @@ footer {
 <body>
 
 <header>
+
     <div class="logo">
         GOJO<span>KID37</span>
     </div>
 
     <nav>
         <a href="#about">About</a>
+        <a href="#combat">Combat</a>
         <a href="#tips">Tips</a>
         <a href="#secrets">Secrets</a>
         <a href="#compete">Compete</a>
     </nav>
+
 </header>
+
+
+<!-- HERO -->
 
 <section class="hero">
 
@@ -253,204 +267,366 @@ footer {
 
 </section>
 
+
+<!-- ABOUT -->
+
 <section id="about">
 
     <h2>⚔️ Welcome to the Arena</h2>
 
     <p class="subtitle">
         Think you know Duelling Grounds?
-        Think again. This is where timing, movement,
-        prediction and reaction speed matter.
+        Think again. Timing, movement, prediction
+        and reactions can completely change a fight.
+    </p>
+
+    <div class="image-box">
+
+        <img
+        src="https://progameguides.com/wp-content/uploads/2025/10/Dueling-Grounds-Ranked.jpg?resize=1200%2C675"
+        alt="Duelling Grounds">
+
+    </div>
+
+</section>
+
+
+<!-- COMBAT -->
+
+<section id="combat">
+
+    <h2>⚔️ Combat</h2>
+
+    <p class="subtitle">
+        Winning isn't only about attacking.
+        Learn how to combine offense, defense and movement.
     </p>
 
     <div class="cards">
 
         <div class="card">
-            <h3>⚔️ Combat</h3>
-            <p>
-                Learn how attacks, parries, dodges and
-                movement work together during a fight.
-            </p>
+
+            <img
+            src="https://progameguides.com/wp-content/uploads/2025/10/Dueling-Grounds-Ranked.jpg?resize=1200%2C675"
+            alt="Combat">
+
+            <div class="card-content">
+
+                <h3>⚔️ Attack</h3>
+
+                <p>
+                    Look for openings instead of attacking
+                    randomly. Make your opponent react to you.
+                </p>
+
+            </div>
+
         </div>
 
-        <div class="card">
-            <h3>🧠 Mind Games</h3>
-            <p>
-                Don't always attack first. Sometimes
-                waiting for your opponent is the better play.
-            </p>
-        </div>
 
         <div class="card">
-            <h3>🔥 Competition</h3>
-            <p>
-                Improve your reactions and learn from
-                every fight instead of repeating the same mistake.
-            </p>
+
+            <img
+            src="https://progameguides.com/wp-content/uploads/2025/10/Dueling-Grounds-Ranked.jpg?resize=1200%2C675"
+            alt="Defense">
+
+            <div class="card-content">
+
+                <h3>🛡️ Defense</h3>
+
+                <p>
+                    Good defense can turn an opponent's attack
+                    into your opportunity.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <img
+            src="https://progameguides.com/wp-content/uploads/2025/10/Dueling-Grounds-Ranked.jpg?resize=1200%2C675"
+            alt="Movement">
+
+            <div class="card-content">
+
+                <h3>🏃 Movement</h3>
+
+                <p>
+                    Keep moving and avoid becoming an easy
+                    target for predictable attacks.
+                </p>
+
+            </div>
+
         </div>
 
     </div>
 
 </section>
+
+
+<!-- TIPS -->
 
 <section id="tips">
 
     <h2>🧠 Things You Might Not Know</h2>
 
     <p class="subtitle">
-        Here are some useful Duelling Grounds tips
-        that can change the way you fight.
+        Small details can make a huge difference.
     </p>
 
     <div class="cards">
 
-        <div class="card tip">
-            <h3>🛡️ Parry Timing</h3>
-            <p>
-                <strong>Did you know?</strong>
-                Parrying is about timing. Don't panic-click
-                constantly. Watch your opponent and react
-                when their attack is actually coming.
-            </p>
+
+        <div class="card">
+
+            <img
+            src="https://progameguides.com/wp-content/uploads/2025/10/Dueling-Grounds-Ranked.jpg?resize=1200%2C675"
+            alt="Parry">
+
+            <div class="card-content">
+
+                <h3>🛡️ Parry Timing</h3>
+
+                <p>
+                    <strong>Did you know?</strong>
+                    Parrying is about timing. Don't panic-click.
+                    Watch the opponent and react to the attack.
+                </p>
+
+            </div>
+
         </div>
 
-        <div class="card tip">
-            <h3>🦘 Jumping</h3>
-            <p>
-                <strong>Did you know?</strong>
-                Jumping can help you avoid certain attacks
-                and can make your movement less predictable.
-            </p>
+
+        <div class="card">
+
+            <img
+            src="https://progameguides.com/wp-content/uploads/2025/10/Dueling-Grounds-Ranked.jpg?resize=1200%2C675"
+            alt="Jumping">
+
+            <div class="card-content">
+
+                <h3>🦘 Jumping</h3>
+
+                <p>
+                    <strong>Did you know?</strong>
+                    Jumping can help you avoid certain attacks
+                    and make your movement harder to predict.
+                </p>
+
+            </div>
+
         </div>
 
-        <div class="card tip">
-            <h3>⚡ Ultimates</h3>
-            <p>
-                <strong>Did you know?</strong>
-                Some powerful attacks can be countered
-                with good timing. Don't automatically assume
-                an ultimate means you have to run.
-            </p>
+
+        <div class="card">
+
+            <img
+            src="https://progameguides.com/wp-content/uploads/2025/10/Dueling-Grounds-Ranked.jpg?resize=1200%2C675"
+            alt="Ultimate">
+
+            <div class="card-content">
+
+                <h3>⚡ Ultimates</h3>
+
+                <p>
+                    <strong>Did you know?</strong>
+                    Powerful attacks aren't automatically
+                    unbeatable. Timing and awareness matter.
+                </p>
+
+            </div>
+
         </div>
 
-        <div class="card tip">
-            <h3>🏃 Movement</h3>
-            <p>
-                <strong>Did you know?</strong>
-                Standing still makes you easier to predict.
-                Mix movement with attacks and defensive plays.
-            </p>
-        </div>
 
-        <div class="card tip">
-            <h3>🎯 Prediction</h3>
-            <p>
-                <strong>Did you know?</strong>
-                Experienced players don't only react.
-                They start predicting what the opponent
-                will do next.
-            </p>
-        </div>
+        <div class="card">
 
-        <div class="card tip">
-            <h3>⏱️ Patience</h3>
-            <p>
-                <strong>Did you know?</strong>
-                Sometimes the best move is doing nothing
-                for a moment and waiting for your opponent
-                to make the first mistake.
-            </p>
+            <img
+            src="https://progameguides.com/wp-content/uploads/2025/10/Dueling-Grounds-Ranked.jpg?resize=1200%2C675"
+            alt="Prediction">
+
+            <div class="card-content">
+
+                <h3>🎯 Prediction</h3>
+
+                <p>
+                    <strong>Did you know?</strong>
+                    Great players don't only react.
+                    They predict what happens next.
+                </p>
+
+            </div>
+
         </div>
 
     </div>
 
 </section>
+
+
+<!-- SECRETS -->
 
 <section id="secrets">
 
     <h2>🔥 Advanced Knowledge</h2>
 
+    <div class="image-box">
+
+        <img
+        src="https://progameguides.com/wp-content/uploads/2025/10/Dueling-Grounds-Ranked.jpg?resize=1200%2C675"
+        alt="Advanced Duelling Grounds">
+
+    </div>
+
     <div class="feature">
 
         <div class="big">
-            DON'T JUST FIGHT — READ YOUR OPPONENT.
+            DON'T JUST FIGHT —
+            <span class="highlight">READ YOUR OPPONENT.</span>
         </div>
 
         <p>
             If someone repeatedly attacks immediately after
-            getting close to you, expect it.
+            getting close, expect it.
         </p>
 
         <p>
             If someone always dodges in the same direction,
-            remember it and adjust your next attack.
+            remember it and adjust your next move.
         </p>
 
         <p>
-            If an opponent keeps waiting for your attack,
+            If someone keeps waiting for your attack,
             don't give them exactly what they want.
         </p>
 
         <p>
             The strongest advantage isn't always speed.
-            Sometimes it's knowing what the other player
-            is going to do before they do it.
-        </p>
-
-        <p class="warning">
-            ⚠️ Remember: timing and strategy matter more
-            than randomly pressing buttons.
+            Sometimes it is knowing what the opponent
+            will do before they do it.
         </p>
 
     </div>
 
 </section>
+
+
+<!-- BEGINNER MISTAKES -->
 
 <section>
 
     <h2>🎮 Beginner Mistakes</h2>
 
+    <p class="subtitle">
+        Avoid these mistakes and you'll already be
+        thinking differently from a beginner.
+    </p>
+
     <div class="cards">
 
-        <div class="card">
-            <h3>❌ Panic Attacking</h3>
-            <p>
-                Constantly attacking can make your next move
-                predictable.
-            </p>
-        </div>
 
         <div class="card">
-            <h3>❌ Ignoring Movement</h3>
-            <p>
-                Good movement can give you opportunities to
-                attack while avoiding incoming pressure.
-            </p>
+
+            <img
+            src="https://progameguides.com/wp-content/uploads/2025/10/Dueling-Grounds-Ranked.jpg?resize=1200%2C675"
+            alt="Panic attacking">
+
+            <div class="card-content">
+
+                <h3>❌ Panic Attacking</h3>
+
+                <p>
+                    Constant attacking can make your moves
+                    predictable.
+                </p>
+
+            </div>
+
         </div>
 
-        <div class="card">
-            <h3>❌ No Adaptation</h3>
-            <p>
-                If the same strategy isn't working,
-                change it instead of repeating it.
-            </p>
-        </div>
 
         <div class="card">
-            <h3>❌ Rushing</h3>
-            <p>
-                A rushed decision can turn an easy situation
-                into a bad one.
-            </p>
+
+            <img
+            src="https://progameguides.com/wp-content/uploads/2025/10/Dueling-Grounds-Ranked.jpg?resize=1200%2C675"
+            alt="Ignoring movement">
+
+            <div class="card-content">
+
+                <h3>❌ Ignoring Movement</h3>
+
+                <p>
+                    Movement can create opportunities while
+                    helping you avoid pressure.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <img
+            src="https://progameguides.com/wp-content/uploads/2025/10/Dueling-Grounds-Ranked.jpg?resize=1200%2C675"
+            alt="No adaptation">
+
+            <div class="card-content">
+
+                <h3>❌ No Adaptation</h3>
+
+                <p>
+                    If something isn't working,
+                    change your strategy.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <img
+            src="https://progameguides.com/wp-content/uploads/2025/10/Dueling-Grounds-Ranked.jpg?resize=1200%2C675"
+            alt="Rushing">
+
+            <div class="card-content">
+
+                <h3>❌ Rushing</h3>
+
+                <p>
+                    A rushed decision can turn a good
+                    situation into a bad one.
+                </p>
+
+            </div>
+
         </div>
 
     </div>
 
 </section>
 
+
+<!-- COMPETE -->
+
 <section id="compete">
 
     <h2>🏆 COMPETE WITH GOJOKID37</h2>
+
+    <div class="image-box">
+
+        <img
+        src="https://progameguides.com/wp-content/uploads/2025/10/Dueling-Grounds-Ranked.jpg?resize=1200%2C675"
+        alt="Compete with Gojokid37">
+
+    </div>
 
     <p class="subtitle">
         You think you're ready?
@@ -460,10 +636,13 @@ footer {
     <a class="button"
        href="https://www.roblox.com/home"
        target="_blank">
+
         ⚔️ COMPETE WITH GOJOKID37
+
     </a>
 
 </section>
+
 
 <footer>
 
