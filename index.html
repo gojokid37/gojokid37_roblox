@@ -5,20 +5,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Gojokid37 | Duelling Grounds Guide, Tips, Strategies & Community</title>
+<title>Gojokid37 | Duelling Grounds Guide & Community</title>
 
-<meta name="description" content="Gojokid37's Duelling Grounds fan website featuring combat tips, movement guides, parry timing, strategy, cosmetics, beginner advice, advanced techniques and community challenges.">
+<meta name="description" content="Gojokid37's Duelling Grounds fan website featuring combat guides, movement tips, parry timing, strategy, cosmetics, beginner advice and competitive gameplay.">
 
-<meta name="keywords" content="Gojokid37, Duelling Grounds, Roblox, Duelling Grounds guide, Roblox combat, parry tips, movement tips, Roblox gaming">
+<meta name="keywords" content="Gojokid37, Duelling Grounds, Roblox, Duelling Grounds guide, Roblox combat, parry, movement, strategy">
 
 <meta name="author" content="Gojokid37">
-
 <meta name="robots" content="index, follow">
 
-<link rel="canonical" href="https://gojokid37.github.io/gojokid37_roblox/">
-
 <style>
-
 * {
     margin: 0;
     padding: 0;
@@ -31,27 +27,23 @@ html {
 }
 
 body {
-    background: #06070b;
+    background: #05060a;
     color: white;
     line-height: 1.6;
-}
-
-a {
-    color: inherit;
 }
 
 header {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 999;
+    z-index: 1000;
     padding: 18px 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(5,5,8,0.88);
+    background: rgba(0,0,0,.88);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,.1);
 }
 
 .logo {
@@ -65,10 +57,10 @@ header {
 }
 
 nav a {
-    text-decoration: none;
-    margin-left: 22px;
-    font-weight: bold;
     color: #ddd;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
     transition: .2s;
 }
 
@@ -78,7 +70,7 @@ nav a:hover {
 
 .hero {
     min-height: 100vh;
-    padding: 150px 8% 100px;
+    padding: 150px 7% 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -86,8 +78,8 @@ nav a:hover {
     text-align: center;
 
     background:
-    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.82)),
-    url("https://progameguides.com/wp-content/uploads/2025/10/Dueling-Grounds-Ranked.jpg?resize=1200%2C675");
+    linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.85)),
+    url("images/arena.jpg");
 
     background-size: cover;
     background-position: center;
@@ -104,25 +96,25 @@ nav a:hover {
 }
 
 .hero p {
-    margin: 15px 0 30px;
-    font-size: 20px;
     color: #ddd;
+    font-size: 21px;
+    margin: 15px 0 30px;
 }
 
 .button {
     display: inline-block;
-    padding: 15px 28px;
-    border-radius: 10px;
+    padding: 15px 30px;
     background: #00aaff;
     color: white;
     text-decoration: none;
     font-weight: bold;
+    border-radius: 10px;
     transition: .25s;
     box-shadow: 0 0 25px rgba(0,170,255,.3);
 }
 
 .button:hover {
-    transform: translateY(-4px) scale(1.03);
+    transform: translateY(-4px) scale(1.04);
     box-shadow: 0 0 40px rgba(0,170,255,.7);
 }
 
@@ -131,42 +123,40 @@ section {
 }
 
 section:nth-child(even) {
-    background: #0a0b11;
+    background: #0a0c12;
 }
 
-.section-title {
+.title {
     text-align: center;
-    margin-bottom: 55px;
+    margin-bottom: 50px;
 }
 
-.section-title h2 {
+.title h2 {
     font-size: clamp(35px,5vw,55px);
-    margin-bottom: 10px;
 }
 
-.section-title p {
+.title p {
     color: #aaa;
 }
 
-.image-wide {
+.wide-image {
     width: 100%;
-    max-height: 520px;
+    max-height: 550px;
     object-fit: cover;
     border-radius: 18px;
-    display: block;
     margin: 30px 0;
-    border: 1px solid #252936;
+    border: 1px solid #282c38;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     gap: 25px;
 }
 
 .card {
-    background: #11131b;
-    border: 1px solid #242735;
+    background: #11141c;
+    border: 1px solid #252a36;
     border-radius: 18px;
     padding: 25px;
     transition: .25s;
@@ -192,96 +182,95 @@ section:nth-child(even) {
 }
 
 .card p {
-    color: #b9bbc4;
+    color: #b8bbc5;
 }
 
 .tag {
     display: inline-block;
-    margin-bottom: 12px;
     padding: 5px 10px;
+    margin-bottom: 12px;
     border-radius: 20px;
     background: rgba(0,170,255,.12);
     color: #00aaff;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: bold;
 }
 
-.highlight {
-    border-left: 4px solid #00aaff;
-    padding: 25px;
-    background: #10131a;
-    margin: 30px 0;
-    border-radius: 10px;
-}
-
-.big-text {
+.text {
     max-width: 950px;
     margin: auto;
-    font-size: 18px;
     color: #ccc;
+    font-size: 18px;
+}
+
+.highlight {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 28px;
+    background: #11141c;
+    border-left: 4px solid #00aaff;
+    border-radius: 10px;
 }
 
 .stats {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(170px,1fr));
     gap: 20px;
-    margin-top: 35px;
+    margin-top: 30px;
 }
 
 .stat {
-    text-align: center;
-    padding: 30px;
-    background: #10121a;
+    background: #11141c;
+    border: 1px solid #252a36;
     border-radius: 15px;
-    border: 1px solid #252936;
+    padding: 25px;
+    text-align: center;
 }
 
 .stat strong {
     display: block;
-    font-size: 38px;
+    font-size: 35px;
     color: #00aaff;
-}
-
-.table-wrap {
-    overflow-x: auto;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 650px;
-    background: #10121a;
+    background: #11141c;
 }
 
-th,td {
-    padding: 17px;
-    border: 1px solid #292d39;
+th, td {
+    padding: 16px;
+    border: 1px solid #292d38;
     text-align: left;
 }
 
 th {
-    background: #151823;
     color: #00aaff;
+    background: #171a23;
+}
+
+.table-container {
+    overflow-x: auto;
 }
 
 details {
-    background: #11131b;
-    border: 1px solid #292d39;
+    background: #11141c;
+    border: 1px solid #292d38;
     border-radius: 12px;
-    margin: 12px 0;
     padding: 18px 22px;
+    margin: 12px 0;
 }
 
 summary {
     cursor: pointer;
     font-weight: bold;
-    font-size: 17px;
 }
 
 footer {
+    background: #030407;
     padding: 45px 7%;
     text-align: center;
-    background: #040509;
     color: #888;
 }
 
@@ -291,12 +280,12 @@ footer strong {
 
 @media(max-width:800px) {
 
-    header {
-        padding: 15px 5%;
-    }
-
     nav {
         display: none;
+    }
+
+    header {
+        padding: 15px 5%;
     }
 
     section {
@@ -308,7 +297,6 @@ footer strong {
         padding-right: 5%;
     }
 }
-
 </style>
 
 </head>
@@ -328,6 +316,7 @@ GOJO<span>KID37</span>
 <a href="#tips">Tips</a>
 <a href="#cosmetics">Cosmetics</a>
 <a href="#strategy">Strategy</a>
+<a href="#mistakes">Mistakes</a>
 <a href="#faq">FAQ</a>
 <a href="#compete">Compete</a>
 </nav>
@@ -340,10 +329,10 @@ GOJO<span>KID37</span>
 
 <h1>GOJO<span>KID37</span></h1>
 
-<p>DUELLING GROUNDS • PLAYER • COMPETITOR • GUIDE</p>
+<p>DUELLING GROUNDS • PLAYER • COMPETITOR</p>
 
 <a class="button" href="https://www.roblox.com/home" target="_blank">
-🎮 PLAY ON ROBLOX
+🎮 PLAY DUELLING GROUNDS
 </a>
 
 </section>
@@ -352,31 +341,33 @@ GOJO<span>KID37</span>
 
 <section id="about">
 
-<div class="section-title">
+<div class="title">
 
 <h2>⚔️ Welcome to the Arena</h2>
 
-<p>The Gojokid37 Duelling Grounds knowledge hub.</p>
+<p>The Gojokid37 Duelling Grounds hub</p>
 
 </div>
 
-<div class="big-text">
+<div class="text">
 
 <p>
 Think you know Duelling Grounds? Think again.
-The difference between an average player and a strong competitor isn't simply pressing buttons quickly.
-It is understanding movement, timing, spacing, reactions, prediction and adaptation.
+Winning isn't simply about pressing buttons quickly.
+Timing, movement, positioning, prediction and adaptation can completely change an encounter.
 </p>
 
-<p style="margin-top:20px;">
-This website collects practical gameplay knowledge into one place so players can learn,
-experiment and improve their decision-making.
+<br>
+
+<p>
+This website brings together gameplay knowledge, beginner advice,
+advanced strategy, movement ideas and competitive tips in one place.
 </p>
 
 </div>
 
-<img class="image-wide"
-src="https://progameguides.com/wp-content/uploads/2025/10/Dueling-Grounds-Ranked.jpg?resize=1200%2C675"
+<img class="wide-image"
+src="images/arena.jpg"
 alt="Duelling Grounds arena">
 
 <div class="stats">
@@ -387,13 +378,13 @@ Combat
 </div>
 
 <div class="stat">
-<strong>🧠</strong>
-Strategy
+<strong>🏃</strong>
+Movement
 </div>
 
 <div class="stat">
-<strong>🏃</strong>
-Movement
+<strong>🧠</strong>
+Strategy
 </div>
 
 <div class="stat">
@@ -409,11 +400,11 @@ Precision
 
 <section id="combat">
 
-<div class="section-title">
+<div class="title">
 
-<h2>⚔️ Combat Fundamentals</h2>
+<h2>⚔️ Combat Guide</h2>
 
-<p>Build your fundamentals before trying advanced techniques.</p>
+<p>Build strong fundamentals.</p>
 
 </div>
 
@@ -421,52 +412,44 @@ Precision
 
 <div class="card">
 
+<img src="images/gameplay.jpg" alt="Duelling Grounds combat gameplay">
+
 <span class="tag">OFFENSE</span>
 
-<h3>⚔️ Attacking</h3>
+<h3>⚔️ Attack</h3>
 
 <p>
-Don't attack simply because you can.
-Look for moments when your opponent is committed, recovering or positioned badly.
+Look for openings instead of attacking randomly.
+Make your opponent react to you and avoid becoming predictable.
 </p>
 
 </div>
 
 <div class="card">
+
+<img src="images/parry.jpg" alt="Duelling Grounds defensive gameplay">
 
 <span class="tag">DEFENSE</span>
 
-<h3>🛡️ Defensive Thinking</h3>
+<h3>🛡️ Defense</h3>
 
 <p>
-Defending isn't passive.
-A successful defensive decision can create an opening for your next move.
+Good defense can turn an opponent's pressure into an opportunity.
+Stay aware instead of reacting blindly.
 </p>
 
 </div>
 
 <div class="card">
+
+<img src="images/ranked.jpg" alt="Duelling Grounds ranked gameplay">
 
 <span class="tag">TIMING</span>
 
 <h3>⏱️ Timing</h3>
 
 <p>
-Good timing often beats frantic reactions.
-Watch the opponent's movement and respond deliberately.
-</p>
-
-</div>
-
-<div class="card">
-
-<span class="tag">AWARENESS</span>
-
-<h3>👁️ Awareness</h3>
-
-<p>
-Always pay attention to distance, positioning and repeated habits.
-The arena gives you information constantly.
+Strong timing comes from watching the opponent and recognizing when an action is actually happening.
 </p>
 
 </div>
@@ -479,11 +462,11 @@ The arena gives you information constantly.
 
 <section id="movement">
 
-<div class="section-title">
+<div class="title">
 
-<h2>🏃 Movement Guide</h2>
+<h2>🏃 Movement Mastery</h2>
 
-<p>Movement is one of the biggest parts of surviving pressure.</p>
+<p>Don't become predictable.</p>
 
 </div>
 
@@ -491,42 +474,37 @@ The arena gives you information constantly.
 
 <div class="card">
 
-<img src="https://progameguides.com/wp-content/uploads/2025/10/Dueling-Grounds-Gameplay.jpg?resize=1200%2C675"
-alt="Duelling Grounds gameplay movement">
+<img src="images/gameplay.jpg" alt="Duelling Grounds movement">
 
 <h3>🏃 Keep Moving</h3>
 
 <p>
-Standing in one predictable position makes your actions easier to anticipate.
-Mix up your movement naturally.
+Movement can make your positioning less predictable and create opportunities.
 </p>
 
 </div>
 
 <div class="card">
 
-<img src="https://progameguides.com/wp-content/uploads/2025/10/Dueling-Grounds.jpg?resize=1200%2C675"
-alt="Duelling Grounds arena">
+<img src="images/arena.jpg" alt="Duelling Grounds arena movement">
 
 <h3>↔️ Change Direction</h3>
 
 <p>
-Repeating the same direction gives opponents information.
-Changing your movement can make your next action less obvious.
+Repeating the exact same movement gives opponents information.
+Mix up your positioning.
 </p>
 
 </div>
 
 <div class="card">
 
-<img src="https://progameguides.com/wp-content/uploads/2025/10/Dueling-Grounds-Ranked.jpg?resize=1200%2C675"
-alt="Duelling Grounds ranked arena">
+<img src="images/ranked.jpg" alt="Duelling Grounds ranked arena">
 
-<h3>📏 Manage Distance</h3>
+<h3>📏 Control Distance</h3>
 
 <p>
-Positioning matters.
-Learn when you are close enough to pressure and when creating space is smarter.
+Learn when to stay close and when creating space gives you a better position.
 </p>
 
 </div>
@@ -539,11 +517,11 @@ Learn when you are close enough to pressure and when creating space is smarter.
 
 <section id="tips">
 
-<div class="section-title">
+<div class="title">
 
 <h2>🧠 Things You Might Not Know</h2>
 
-<p>Small habits can make a major difference.</p>
+<p>Small details can make a big difference.</p>
 
 </div>
 
@@ -551,66 +529,52 @@ Learn when you are close enough to pressure and when creating space is smarter.
 
 <div class="card">
 
+<img src="images/parry.jpg" alt="Duelling Grounds parry">
+
 <h3>🛡️ Parry Timing</h3>
 
 <p>
-Don't panic when an opponent approaches.
-Watch their action and focus on reacting at the appropriate moment.
+Don't panic.
+Watch the opponent and focus on responding at the right moment.
 </p>
 
 </div>
 
 <div class="card">
+
+<img src="images/gameplay.jpg" alt="Duelling Grounds jumping">
 
 <h3>🦘 Jumping</h3>
 
 <p>
-Jumping and vertical movement can change the rhythm of an encounter.
-Use movement deliberately rather than constantly.
+Vertical movement can change the rhythm of an encounter.
+Use it deliberately rather than constantly.
 </p>
 
 </div>
 
 <div class="card">
+
+<img src="images/ranked.jpg" alt="Duelling Grounds ultimate gameplay">
+
+<h3>⚡ Powerful Attacks</h3>
+
+<p>
+A powerful move doesn't automatically mean the situation is hopeless.
+Awareness and timing still matter.
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="images/arena.jpg" alt="Duelling Grounds prediction">
 
 <h3>🎯 Prediction</h3>
 
 <p>
-Strong players don't only react.
-They recognize patterns and make educated predictions.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>⏱️ Patience</h3>
-
-<p>
-Sometimes the strongest decision is waiting.
-Letting an opponent commit first can reveal what they want to do.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🔄 Adaptation</h3>
-
-<p>
-If your approach stops working, don't stubbornly repeat it.
-Change the rhythm and look for another solution.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>👀 Observation</h3>
-
-<p>
-Watch how opponents behave after certain situations.
-Repeated habits can become valuable information.
+Experienced players don't only react.
+They recognize patterns and predict what might happen next.
 </p>
 
 </div>
@@ -623,56 +587,61 @@ Repeated habits can become valuable information.
 
 <section id="cosmetics">
 
-<div class="section-title">
+<div class="title">
 
 <h2>🎨 Cosmetics & Styles</h2>
 
-<p>Looking cool is part of the experience too.</p>
+<p>Build a look that feels like you.</p>
 
 </div>
-
-<img class="image-wide"
-src="https://progameguides.com/wp-content/uploads/2025/10/Dueling-Grounds-Ranked.jpg?resize=1200%2C675"
-alt="Duelling Grounds visual">
 
 <div class="grid">
 
 <div class="card">
 
-<h3>🔥 Clean Style</h3>
-
-<p>
-Minimal visual clutter can give your character a clean competitive appearance.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>⚡ High-Impact Style</h3>
-
-<p>
-Bright effects and dramatic cosmetics can create a more noticeable presence in the arena.
-</p>
-
-</div>
-
-<div class="card">
+<img src="images/arena.jpg" alt="Duelling Grounds visual style">
 
 <h3>🌑 Dark Style</h3>
 
 <p>
-Dark-themed combinations create a mysterious competitive look.
+Dark-themed cosmetics can create a mysterious competitive appearance.
 </p>
 
 </div>
 
 <div class="card">
 
+<img src="images/ranked.jpg" alt="Duelling Grounds ranked style">
+
+<h3>⚡ High-Impact Style</h3>
+
+<p>
+Bright and noticeable cosmetics can give your character a strong visual presence.
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="images/gameplay.jpg" alt="Duelling Grounds character style">
+
+<h3>🔥 Clean Style</h3>
+
+<p>
+A simple combination can create a clean and recognizable appearance.
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="images/parry.jpg" alt="Duelling Grounds cosmetic style">
+
 <h3>💠 Unique Style</h3>
 
 <p>
-The best cosmetic combination is ultimately the one that matches your own style.
+There isn't one universal best look.
+The best style is the one that fits your own taste.
 </p>
 
 </div>
@@ -685,23 +654,29 @@ The best cosmetic combination is ultimately the one that matches your own style.
 
 <section id="strategy">
 
-<div class="section-title">
+<div class="title">
 
-<h2>🔥 Advanced Strategy</h2>
+<h2>🔥 Advanced Knowledge</h2>
 
-<p>Don't just react. Read the opponent.</p>
+<p>DON'T JUST FIGHT — READ YOUR OPPONENT.</p>
 
 </div>
+
+<img class="wide-image"
+src="images/gameplay.jpg"
+alt="Advanced Duelling Grounds gameplay">
 
 <div class="highlight">
 
 <h3>🧠 READ THE PATTERN</h3>
 
 <p>
-If someone repeatedly does the same thing after approaching you,
+If someone repeatedly attacks after approaching,
 remember that pattern.
-If they constantly retreat after an exchange, expect the retreat.
-If they repeatedly choose the same movement direction, account for it.
+If someone constantly retreats after an exchange,
+expect the retreat.
+If someone repeatedly chooses the same movement direction,
+adapt to it.
 </p>
 
 </div>
@@ -710,11 +685,10 @@ If they repeatedly choose the same movement direction, account for it.
 
 <div class="card">
 
-<h3>1️⃣ Identify</h3>
+<h3>1️⃣ Observe</h3>
 
 <p>
-Observe what the opponent repeatedly does.
-Don't rush to conclusions after one interaction.
+Watch what your opponent repeatedly does before deciding how to respond.
 </p>
 
 </div>
@@ -724,7 +698,7 @@ Don't rush to conclusions after one interaction.
 <h3>2️⃣ Test</h3>
 
 <p>
-Try a different approach and see whether they respond in the same way.
+Try a different approach and see how they react.
 </p>
 
 </div>
@@ -734,7 +708,7 @@ Try a different approach and see whether they respond in the same way.
 <h3>3️⃣ Adapt</h3>
 
 <p>
-Once you recognize a pattern, change your decision-making around it.
+Once you identify a pattern, change your decisions around it.
 </p>
 
 </div>
@@ -744,8 +718,8 @@ Once you recognize a pattern, change your decision-making around it.
 <h3>4️⃣ Stay Unpredictable</h3>
 
 <p>
-Remember that opponents can read your habits too.
-Don't become predictable yourself.
+Remember that your opponent is watching you too.
+Don't fall into your own repeated patterns.
 </p>
 
 </div>
@@ -754,15 +728,15 @@ Don't become predictable yourself.
 
 </section>
 
-<!-- BEGINNER -->
+<!-- MISTAKES -->
 
-<section>
+<section id="mistakes">
 
-<div class="section-title">
+<div class="title">
 
 <h2>🎮 Beginner Mistakes</h2>
 
-<p>Avoid these and your fundamentals will improve faster.</p>
+<p>Fix these habits and your fundamentals become stronger.</p>
 
 </div>
 
@@ -770,62 +744,49 @@ Don't become predictable yourself.
 
 <div class="card">
 
+<img src="images/gameplay.jpg" alt="Duelling Grounds beginner gameplay">
+
 <h3>❌ Panic Attacking</h3>
 
 <p>
-Constant pressure without thinking can make your actions predictable.
+Constant attacking can make your next move predictable.
 </p>
 
 </div>
 
 <div class="card">
+
+<img src="images/arena.jpg" alt="Duelling Grounds movement mistake">
 
 <h3>❌ Ignoring Movement</h3>
 
 <p>
-Movement isn't decoration.
-Positioning can completely change an encounter.
+Positioning matters.
+Don't stand in one predictable place throughout an encounter.
 </p>
 
 </div>
 
 <div class="card">
+
+<img src="images/parry.jpg" alt="Duelling Grounds timing mistake">
 
 <h3>❌ No Adaptation</h3>
 
 <p>
-Repeating a failed strategy won't magically make it work.
-Change your approach.
+If your approach isn't working, change your strategy.
 </p>
 
 </div>
 
 <div class="card">
+
+<img src="images/ranked.jpg" alt="Duelling Grounds ranked mistake">
 
 <h3>❌ Rushing</h3>
 
 <p>
 A rushed decision can turn a favorable situation into a bad one.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>❌ Tunnel Vision</h3>
-
-<p>
-Don't focus so heavily on attacking that you stop noticing what your opponent is doing.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>❌ Repeating Yourself</h3>
-
-<p>
-If your opponent has already figured out your pattern, change it.
 </p>
 
 </div>
@@ -838,20 +799,20 @@ If your opponent has already figured out your pattern, change it.
 
 <section>
 
-<div class="section-title">
+<div class="title">
 
 <h2>🏆 Player Progression</h2>
 
-<p>A simple way to think about improving.</p>
+<p>Improve one skill at a time.</p>
 
 </div>
 
-<div class="table-wrap">
+<div class="table-container">
 
 <table>
 
 <tr>
-<th>Level</th>
+<th>Stage</th>
 <th>Main Focus</th>
 <th>Goal</th>
 </tr>
@@ -859,83 +820,28 @@ If your opponent has already figured out your pattern, change it.
 <tr>
 <td>Beginner</td>
 <td>Movement & basic timing</td>
-<td>Stop making unnecessary mistakes</td>
+<td>Reduce unnecessary mistakes</td>
 </tr>
 
 <tr>
 <td>Developing</td>
 <td>Spacing & reactions</td>
-<td>Recognize openings</td>
+<td>Recognize opportunities</td>
 </tr>
 
 <tr>
 <td>Experienced</td>
 <td>Prediction & adaptation</td>
-<td>Read repeated patterns</td>
+<td>Recognize patterns</td>
 </tr>
 
 <tr>
 <td>Advanced</td>
-<td>Mind games & consistency</td>
-<td>Control the rhythm of encounters</td>
+<td>Consistency & mind games</td>
+<td>Control the rhythm</td>
 </tr>
 
 </table>
-
-</div>
-
-</section>
-
-<!-- COMMUNITY -->
-
-<section>
-
-<div class="section-title">
-
-<h2>🌐 Gojokid37 Community</h2>
-
-<p>A place for players who enjoy improving their gameplay.</p>
-
-</div>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>🎮 Roblox</h3>
-
-<p>
-Visit Roblox and find the game directly through the platform.
-</p>
-
-<br>
-
-<a class="button" href="https://www.roblox.com/home" target="_blank">
-OPEN ROBLOX
-</a>
-
-</div>
-
-<div class="card">
-
-<h3>🔥 Challenges</h3>
-
-<p>
-Create personal challenges such as improving movement,
-learning better timing or winning while staying calm under pressure.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>📈 Improvement</h3>
-
-<p>
-After each session, think about one thing you did well and one thing you could improve.
-</p>
-
-</div>
 
 </div>
 
@@ -945,11 +851,11 @@ After each session, think about one thing you did well and one thing you could i
 
 <section id="faq">
 
-<div class="section-title">
+<div class="title">
 
-<h2>❓ Frequently Asked Questions</h2>
+<h2>❓ FAQ</h2>
 
-<p>Common questions about improving in Duelling Grounds.</p>
+<p>Frequently asked questions.</p>
 
 </div>
 
@@ -957,14 +863,15 @@ After each session, think about one thing you did well and one thing you could i
 <summary>How do I get better at Duelling Grounds?</summary>
 <p>
 Practice movement, timing, observation and adaptation.
-Don't focus only on winning every encounter.
+Focus on learning from each encounter.
 </p>
 </details>
 
 <details>
 <summary>Is speed everything?</summary>
 <p>
-No. Decision-making, timing, positioning and prediction are also important parts of gameplay.
+No.
+Positioning, timing, prediction and decision-making are also important.
 </p>
 </details>
 
@@ -972,7 +879,7 @@ No. Decision-making, timing, positioning and prediction are also important parts
 <summary>Why do I keep losing the same way?</summary>
 <p>
 You may be repeating the same pattern.
-Watch what happens immediately before you lose and identify what you could change.
+Look at what happened immediately before the mistake and try changing it.
 </p>
 </details>
 
@@ -980,7 +887,7 @@ Watch what happens immediately before you lose and identify what you could chang
 <summary>Should I always attack first?</summary>
 <p>
 Not necessarily.
-Sometimes waiting can reveal what your opponent wants to do.
+Sometimes waiting allows you to learn what your opponent wants to do.
 </p>
 </details>
 
@@ -988,16 +895,14 @@ Sometimes waiting can reveal what your opponent wants to do.
 <summary>How can I become less predictable?</summary>
 <p>
 Avoid repeating the exact same movement and decision sequence every time.
-Mix your choices naturally.
 </p>
 </details>
 
 <details>
-<summary>Does this website belong to Roblox?</summary>
+<summary>Is this an official Roblox website?</summary>
 <p>
 No.
-This is an unofficial fan website created for Gojokid37.
-Roblox and related trademarks belong to their respective owners.
+This is an unofficial Gojokid37 fan website.
 </p>
 </details>
 
@@ -1007,7 +912,7 @@ Roblox and related trademarks belong to their respective owners.
 
 <section id="compete">
 
-<div class="section-title">
+<div class="title">
 
 <h2>🏆 COMPETE WITH GOJOKID37</h2>
 
@@ -1015,25 +920,26 @@ Roblox and related trademarks belong to their respective owners.
 
 </div>
 
-<img class="image-wide"
-src="https://progameguides.com/wp-content/uploads/2025/10/Dueling-Grounds-Gameplay.jpg?resize=1200%2C675"
-alt="Duelling Grounds gameplay">
+<img class="wide-image"
+src="images/ranked.jpg"
+alt="Duelling Grounds competitive arena">
 
-<div class="big-text" style="text-align:center;">
+<div class="text" style="text-align:center;">
 
 <p>
 Step into the arena.
 Stay calm.
 Watch your opponent.
 Adapt.
-And most importantly — keep improving.
+Keep improving.
 </p>
 
 <br>
 
-<a class="button" href="https://www.roblox.com/home" target="_blank">
-⚔️ ENTER ROBLOX
-</a>
+<a class="button"
+href="https://www.roblox.com/home"
+target="_blank">
+⚔️ ENTER ROBLOX </a>
 
 </div>
 
@@ -1055,7 +961,7 @@ Duelling Grounds Fan Website
 © 2026 Gojokid37 • Unofficial fan project
 </p>
 
-<p style="margin-top:12px;">
+<p>
 This website is not affiliated with or endorsed by Roblox.
 </p>
 
