@@ -4,16 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>GOJOKID37 | Ultimate Duelling Grounds Hub</title>
+<title>GOJOKID37 | Dueling Grounds Hub</title>
 
 <meta name="description"
-content="GOJOKID37's huge Duelling Grounds fan hub covering combat, movement, parry timing, prediction, ranked play, cosmetics, controls, tips and game information.">
+content="GOJOKID37 Dueling Grounds hub featuring gameplay information, movement, arena awareness, beginner guides, updates, screenshots, community information and more.">
+
+<meta name="keywords"
+content="GOJOKID37, Dueling Grounds, Roblox, Roblox Dueling Grounds, gameplay, movement, arena guide">
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
 }
 
 html{
@@ -21,10 +26,19 @@ html{
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#05070b;
-    color:white;
+    background:#050505;
+    color:#fff;
     line-height:1.7;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+img{
+    width:100%;
+    display:block;
 }
 
 header{
@@ -32,232 +46,516 @@ header{
     top:0;
     left:0;
     width:100%;
-    z-index:100;
-    padding:16px 6%;
+    z-index:999;
+    padding:18px 6%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background:rgba(3,6,11,.94);
-    backdrop-filter:blur(14px);
-    border-bottom:1px solid #202b3a;
+    background:rgba(0,0,0,.82);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,255,255,.12);
 }
 
 .logo{
     font-size:25px;
     font-weight:900;
-    letter-spacing:1px;
+    letter-spacing:2px;
 }
 
 .logo span{
-    color:#00bfff;
+    color:#00aaff;
+}
+
+nav{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
     font-size:14px;
-    font-weight:800;
+    font-weight:bold;
+    opacity:.85;
+    transition:.25s;
 }
 
 nav a:hover{
-    color:#00bfff;
+    color:#00aaff;
+    opacity:1;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:120px 7% 80px;
+    background:
+        linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.88)),
+        url("https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=2000&q=85")
+        center/cover fixed;
+}
+
+.hero-content{
+    max-width:1000px;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 18px;
+    border:1px solid rgba(0,170,255,.5);
+    border-radius:30px;
+    color:#00aaff;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(55px,10vw,120px);
+    line-height:1;
+    font-weight:1000;
+    letter-spacing:-5px;
+    text-shadow:0 10px 40px #000;
+}
+
+.hero h1 span{
+    color:#00aaff;
+}
+
+.hero p{
+    max-width:750px;
+    margin:25px auto;
+    font-size:19px;
+    color:#ddd;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.btn{
+    padding:14px 25px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.25s;
+    border:1px solid rgba(255,255,255,.2);
+}
+
+.btn-primary{
+    background:#00aaff;
+    color:#000;
+}
+
+.btn-secondary{
+    background:rgba(255,255,255,.08);
+}
+
+.btn:hover{
+    transform:translateY(-4px);
 }
 
 section{
     padding:100px 7%;
 }
 
-.hero{
-    min-height:100vh;
-    padding-top:130px;
+.section-title{
+    text-align:center;
+    margin-bottom:55px;
+}
+
+.section-title small{
+    color:#00aaff;
+    font-weight:bold;
+    letter-spacing:3px;
+}
+
+.section-title h2{
+    font-size:clamp(35px,5vw,60px);
+    margin:8px 0;
+}
+
+.section-title p{
+    max-width:750px;
+    margin:auto;
+    color:#aaa;
+}
+
+.about{
+    background:#090909;
+}
+
+.about-grid{
+    max-width:1200px;
+    margin:auto;
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:50px;
+    gap:45px;
     align-items:center;
-    background:
-    radial-gradient(circle at 80% 20%,#0b3c52 0%,#071018 30%,#05070b 70%);
 }
 
-.badge{
-    display:inline-block;
-    padding:7px 14px;
-    border:1px solid #00bfff;
-    border-radius:999px;
-    color:#00bfff;
-    font-weight:900;
-}
-
-h1{
-    font-size:clamp(55px,8vw,105px);
-    line-height:.9;
-    margin:20px 0;
-}
-
-.hero p{
-    color:#b9c5d2;
-    font-size:20px;
-    max-width:700px;
-}
-
-.btn{
-    display:inline-block;
-    margin-top:28px;
-    padding:14px 22px;
-    background:#00bfff;
-    color:#001018;
-    text-decoration:none;
-    border-radius:10px;
-    font-weight:900;
-}
-
-.btn:hover{
-    transform:translateY(-2px);
-    box-shadow:0 0 25px rgba(0,191,255,.35);
-}
-
-.visual{
-    width:100%;
-    overflow:hidden;
+.about-image{
     border-radius:18px;
-    border:1px solid #00bfff;
-    background:#080c13;
-    box-shadow:0 0 35px rgba(0,191,255,.12);
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.12);
 }
 
-.visual svg{
-    width:100%;
-    display:block;
+.about-image img{
+    height:420px;
+    object-fit:cover;
 }
 
-.title{
-    font-size:43px;
-    margin-bottom:8px;
+.about-text h3{
+    font-size:32px;
+    margin-bottom:15px;
 }
 
-.sub{
-    color:#98a7b8;
-    margin-bottom:35px;
+.about-text p{
+    color:#bbb;
+    margin-bottom:18px;
 }
 
-.grid{
+.stats{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:24px;
+    gap:15px;
+    margin-top:25px;
+}
+
+.stat{
+    background:#111;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.stat strong{
+    display:block;
+    font-size:30px;
+    color:#00aaff;
+}
+
+.cards{
+    max-width:1250px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
 }
 
 .card{
-    background:#0d121a;
-    border:1px solid #273241;
-    border-radius:18px;
+    background:#0d0d0d;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:16px;
     overflow:hidden;
-    transition:.2s;
+    transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-6px);
-    border-color:#00bfff;
+    transform:translateY(-8px);
+    border-color:rgba(0,170,255,.5);
 }
 
-.card .visual{
-    border:0;
-    border-radius:0;
-    box-shadow:none;
+.card img{
+    height:220px;
+    object-fit:cover;
 }
 
-.body{
-    padding:24px;
+.card-content{
+    padding:25px;
 }
 
-.body h3{
+.card-content h3{
     font-size:23px;
     margin-bottom:10px;
 }
 
-.body p{
-    color:#b8c4d1;
+.card-content p{
+    color:#aaa;
 }
 
-.tablewrap{
-    overflow-x:auto;
-    border:1px solid #273241;
-    border-radius:16px;
+.movement{
+    background:#080808;
 }
 
-table{
-    width:100%;
-    border-collapse:collapse;
-    background:#0d121a;
-}
-
-th,td{
-    padding:16px;
-    text-align:left;
-    border-bottom:1px solid #273241;
-}
-
-th{
-    color:#00bfff;
-}
-
-.pills{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    margin-top:20px;
-}
-
-.pill{
-    padding:8px 13px;
-    background:#111a25;
-    border:1px solid #2c3c4e;
-    border-radius:999px;
-    color:#c9d6e3;
-}
-
-.callout{
-    padding:40px;
-    border:1px solid #00bfff;
-    border-radius:22px;
-    background:linear-gradient(135deg,#071722,#0c1119);
-}
-
-.callout h2{
-    margin-bottom:12px;
-}
-
-.cosmetics{
+.movement-grid{
+    max-width:1200px;
+    margin:auto;
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
 }
 
-.cosmetic{
-    padding:25px;
-    background:#0d121a;
-    border:1px solid #273241;
-    border-radius:16px;
-    text-align:center;
+.big-card{
+    min-height:360px;
+    border-radius:18px;
+    overflow:hidden;
+    position:relative;
+    display:flex;
+    align-items:flex-end;
+    border:1px solid rgba(255,255,255,.1);
 }
 
-.cosmetic-icon{
-    font-size:50px;
-    margin-bottom:12px;
+.big-card img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
-.cosmetic h3{
+.big-card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(transparent,rgba(0,0,0,.95));
+}
+
+.big-card-content{
+    position:relative;
+    z-index:2;
+    padding:30px;
+}
+
+.big-card-content h3{
+    font-size:30px;
+}
+
+.big-card-content p{
+    color:#ccc;
+}
+
+.awareness{
+    background:#050505;
+}
+
+.awareness-box{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.awareness-item{
+    padding:30px;
+    background:linear-gradient(145deg,#101010,#080808);
+    border-radius:15px;
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.icon{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.awareness-item h3{
     margin-bottom:8px;
 }
 
-.cosmetic p{
-    color:#aebbc9;
+.awareness-item p{
+    color:#aaa;
+}
+
+.progress{
+    background:#090909;
+}
+
+.timeline{
+    max-width:950px;
+    margin:auto;
+}
+
+.step{
+    display:grid;
+    grid-template-columns:90px 1fr;
+    gap:25px;
+    margin-bottom:25px;
+    align-items:start;
+}
+
+.step-number{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#00aaff;
+    color:#000;
+    font-weight:900;
+    font-size:24px;
+}
+
+.step-content{
+    background:#111;
+    padding:25px;
+    border-radius:15px;
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.step-content h3{
+    font-size:23px;
+}
+
+.step-content p{
+    color:#aaa;
+}
+
+.gallery{
+    background:#080808;
+}
+
+.gallery-grid{
+    max-width:1250px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.gallery-item{
+    height:230px;
+    overflow:hidden;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.gallery-item img{
+    height:100%;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.08);
+}
+
+.updates{
+    background:#050505;
+}
+
+.update-list{
+    max-width:1000px;
+    margin:auto;
+}
+
+.update{
+    display:flex;
+    gap:25px;
+    padding:25px 0;
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.update-date{
+    min-width:120px;
+    color:#00aaff;
+    font-weight:bold;
+}
+
+.update h3{
+    margin-bottom:5px;
+}
+
+.update p{
+    color:#aaa;
+}
+
+.faq{
+    background:#090909;
+}
+
+.faq-grid{
+    max-width:1000px;
+    margin:auto;
+    display:grid;
+    gap:15px;
+}
+
+details{
+    background:#111;
+    padding:20px 25px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,.1);
+}
+
+summary{
+    cursor:pointer;
+    font-weight:bold;
+    font-size:18px;
+}
+
+details p{
+    color:#aaa;
+    margin-top:12px;
+}
+
+.competition{
+    min-height:550px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:
+        linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.9)),
+        url("https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=2000&q=85")
+        center/cover fixed;
+}
+
+.competition-content{
+    max-width:850px;
+}
+
+.competition h2{
+    font-size:clamp(40px,7vw,75px);
+    line-height:1;
+}
+
+.competition p{
+    color:#ddd;
+    margin:25px 0;
+    font-size:19px;
 }
 
 footer{
-    padding:40px 7%;
+    padding:60px 7% 30px;
+    background:#020202;
+    border-top:1px solid rgba(255,255,255,.1);
+}
+
+.footer-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:40px;
+}
+
+footer h3{
+    margin-bottom:15px;
+}
+
+footer p,
+footer a{
+    color:#888;
+}
+
+footer a:hover{
+    color:#00aaff;
+}
+
+.footer-bottom{
+    max-width:1200px;
+    margin:45px auto 0;
+    padding-top:25px;
+    border-top:1px solid rgba(255,255,255,.1);
     text-align:center;
-    color:#718093;
-    border-top:1px solid #202a38;
+    color:#666;
 }
 
 @media(max-width:900px){
@@ -266,34 +564,61 @@ footer{
         display:none;
     }
 
-    .hero{
-        grid-template-columns:1fr;
-        padding:120px 5% 70px;
-    }
-
-    section{
-        padding:70px 5%;
-    }
-
-    .grid{
+    .about-grid,
+    .movement-grid{
         grid-template-columns:1fr;
     }
 
-    .cosmetics{
+    .cards{
         grid-template-columns:1fr 1fr;
     }
+
+    .awareness-box{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
 }
 
-@media(max-width:550px){
+@media(max-width:600px){
 
-    .cosmetics{
+    section{
+        padding:75px 5%;
+    }
+
+    .cards,
+    .awareness-box{
         grid-template-columns:1fr;
     }
 
-    h1{
-        font-size:60px;
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    .step{
+        grid-template-columns:60px 1fr;
+    }
+
+    .step-number{
+        width:55px;
+        height:55px;
+    }
+
+    .hero h1{
+        letter-spacing:-2px;
     }
 }
+
 </style>
 </head>
 
@@ -301,1280 +626,879 @@ footer{
 
 <header>
 
-<div class="logo">
+<a href="#top" class="logo">
 GOJO<span>KID37</span>
-</div>
+</a>
 
 <nav>
-<a href="#about">ABOUT</a>
-<a href="#combat">COMBAT</a>
-<a href="#movement">MOVEMENT</a>
-<a href="#tips">TIPS</a>
-<a href="#cosmetics">COSMETICS</a>
-<a href="#ranked">RANKED</a>
-<a href="#compete">COMPETE</a>
+<a href="#about">About</a>
+<a href="#movement">Movement</a>
+<a href="#awareness">Awareness</a>
+<a href="#progress">Progress</a>
+<a href="#gallery">Gallery</a>
+<a href="#updates">Updates</a>
+<a href="#faq">FAQ</a>
 </nav>
 
 </header>
 
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 
-<section class="hero" id="about">
+<section class="hero" id="top">
+
+<div class="hero-content">
+
+<div class="badge">⚡ GOJOKID37 • DUELING GROUNDS HUB</div>
+
+<h1>GOJO<span>KID37</span></h1>
+
+<p>
+Welcome to the ultimate GOJOKID37 Dueling Grounds hub.
+Explore gameplay information, movement ideas, arena awareness,
+beginner progression, updates and more.
+</p>
+
+<div class="buttons">
+
+<a class="btn btn-primary"
+href="https://www.roblox.com/games/94217045453265/Dueling-Grounds"
+target="_blank">
+🎮 PLAY ON ROBLOX
+</a>
+
+<a class="btn btn-secondary" href="#about">
+🔥 EXPLORE THE SITE
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="section-title">
+
+<small>WELCOME</small>
+
+<h2>THE GOJOKID37 HUB</h2>
+
+<p>
+A dedicated fan-made website built around Dueling Grounds,
+Roblox gameplay and the GOJOKID37 gaming identity.
+</p>
+
+</div>
+
+<div class="about-grid">
+
+<div class="about-image">
+
+<img
+src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1400&q=85"
+alt="Gaming setup">
+
+</div>
+
+<div class="about-text">
+
+<h3>More Than Just A Game Page</h3>
+
+<p>
+This website is designed as a growing hub rather than a simple
+profile page. The goal is to collect useful information in one
+place and keep expanding it over time.
+</p>
+
+<p>
+Whether you're completely new to the game or already comfortable
+in the arena, there are sections here covering movement,
+awareness, progression, updates and general gameplay mindset.
+</p>
+
+<div class="stats">
+
+<div class="stat">
+<strong>01</strong>
+Hub
+</div>
+
+<div class="stat">
+<strong>∞</strong>
+Updates
+</div>
+
+<div class="stat">
+<strong>24/7</strong>
+Access
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GAMEPLAY -->
+
+<section id="gameplay">
+
+<div class="section-title">
+
+<small>GAMEPLAY</small>
+
+<h2>KNOW THE EXPERIENCE</h2>
+
+<p>
+Understand the environment before worrying about advanced play.
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<img
+src="https://images.unsplash.com/photo-1547394765-185e1e68f34e?auto=format&fit=crop&w=1200&q=85"
+alt="Gaming screen">
+
+<div class="card-content">
+
+<h3>🎮 Enter The Arena</h3>
+
+<p>
+Take time to understand the arena layout, movement space
+and how players interact with the environment.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<img
+src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=1200&q=85"
+alt="Game controller">
+
+<div class="card-content">
+
+<h3>🕹️ Learn The Controls</h3>
+
+<p>
+Knowing where your controls are makes the experience smoother
+and lets you focus more on what is happening around you.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<img
+src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=1200&q=85"
+alt="Gaming computer">
+
+<div class="card-content">
+
+<h3>🧠 Build Awareness</h3>
+
+<p>
+Pay attention to your surroundings instead of focusing on
+only one thing happening directly in front of you.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MOVEMENT -->
+
+<section class="movement" id="movement">
+
+<div class="section-title">
+
+<small>MOVEMENT</small>
+
+<h2>MOVE WITH PURPOSE</h2>
+
+<p>
+Movement is one of the easiest areas to improve through practice.
+</p>
+
+</div>
+
+<div class="movement-grid">
+
+
+<div class="big-card">
+
+<img
+src="https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?auto=format&fit=crop&w=1400&q=85"
+alt="Gaming action">
+
+<div class="big-card-content">
+
+<h3>🏃 Stay Mobile</h3>
+
+<p>
+Avoid becoming completely predictable. Learn how your character
+moves and become comfortable changing direction.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="big-card">
+
+<img
+src="https://images.unsplash.com/photo-1603481546238-487240415921?auto=format&fit=crop&w=1400&q=85"
+alt="Gaming room">
+
+<div class="big-card-content">
+
+<h3>🎯 Control Your Position</h3>
+
+<p>
+Know where you are in the arena. Positioning can affect how
+many options you have when the situation changes.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="big-card">
+
+<img
+src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?auto=format&fit=crop&w=1400&q=85"
+alt="Gaming desk">
+
+<div class="big-card-content">
+
+<h3>🔄 Change Direction</h3>
+
+<p>
+Practice moving in different directions instead of following
+the exact same movement pattern every time.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="big-card">
+
+<img
+src="https://images.unsplash.com/photo-1616588589676-62b3bd4ff6d2?auto=format&fit=crop&w=1400&q=85"
+alt="Gaming setup">
+
+<div class="big-card-content">
+
+<h3>⚡ Stay Comfortable</h3>
+
+<p>
+Good movement should eventually feel natural instead of requiring
+you to think about every individual input.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- AWARENESS -->
+
+<section class="awareness" id="awareness">
+
+<div class="section-title">
+
+<small>MENTAL GAME</small>
+
+<h2>ARENA AWARENESS</h2>
+
+<p>
+The strongest improvement isn't always faster reactions.
+Sometimes it is simply noticing more.
+</p>
+
+</div>
+
+<div class="awareness-box">
+
+
+<div class="awareness-item">
+
+<div class="icon">👀</div>
+
+<h3>Watch Patterns</h3>
+
+<p>
+Notice repeated movement and habits. Players often develop
+patterns without realizing it.
+</p>
+
+</div>
+
+
+<div class="awareness-item">
+
+<div class="icon">🧠</div>
+
+<h3>Stay Patient</h3>
+
+<p>
+You don't have to react instantly to everything. Take a moment
+to understand what is happening.
+</p>
+
+</div>
+
+
+<div class="awareness-item">
+
+<div class="icon">🔄</div>
+
+<h3>Adapt</h3>
+
+<p>
+If something isn't working, don't repeat it endlessly.
+Change your approach and learn from the result.
+</p>
+
+</div>
+
+
+<div class="awareness-item">
+
+<div class="icon">📍</div>
+
+<h3>Know Your Position</h3>
+
+<p>
+Always know where you are in relation to the center,
+edges and available space.
+</p>
+
+</div>
+
+
+<div class="awareness-item">
+
+<div class="icon">⏱️</div>
+
+<h3>Improve Timing</h3>
+
+<p>
+Practice recognizing the right moment to move, defend,
+reset or reposition.
+</p>
+
+</div>
+
+
+<div class="awareness-item">
+
+<div class="icon">🔥</div>
+
+<h3>Stay Calm</h3>
+
+<p>
+A calm player can usually notice more information than someone
+who is rushing every decision.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROGRESSION -->
+
+<section class="progress" id="progress">
+
+<div class="section-title">
+
+<small>PROGRESSION</small>
+
+<h2>FROM BEGINNER TO EXPERIENCED</h2>
+
+<p>
+A simple progression system for improving your overall gameplay.
+</p>
+
+</div>
+
+<div class="timeline">
+
+
+<div class="step">
+
+<div class="step-number">1</div>
+
+<div class="step-content">
+
+<h3>Learn The Basics</h3>
+
+<p>
+Understand the controls, camera, movement and basic game flow
+before worrying about advanced techniques.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">2</div>
+
+<div class="step-content">
+
+<h3>Get Comfortable</h3>
+
+<p>
+Play enough matches that moving around the arena and using
+your controls starts becoming natural.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">3</div>
+
+<div class="step-content">
+
+<h3>Study Your Mistakes</h3>
+
+<p>
+Instead of only thinking about whether you won or lost,
+think about what caused important moments in the match.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">4</div>
+
+<div class="step-content">
+
+<h3>Recognize Patterns</h3>
+
+<p>
+Start noticing repeated behaviors, movement habits and
+situations that happen frequently.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">5</div>
+
+<div class="step-content">
+
+<h3>Adapt</h3>
+
+<p>
+Once you recognize a pattern, experiment with a different
+response and see what happens.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">6</div>
+
+<div class="step-content">
+
+<h3>Build Your Own Style</h3>
+
+<p>
+Eventually your movement, awareness and decision-making
+become your own personal playstyle.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section class="gallery" id="gallery">
+
+<div class="section-title">
+
+<small>VISUAL HUB</small>
+
+<h2>GAMING GALLERY</h2>
+
+<p>
+A visual section for the site. You can replace these images
+with your own Dueling Grounds screenshots whenever you want.
+</p>
+
+</div>
+
+<div class="gallery-grid">
+
+<div class="gallery-item">
+<img
+src="https://images.unsplash.com/photo-1542751110-97427bbecf20?auto=format&fit=crop&w=1200&q=85"
+alt="Gaming gallery image 1">
+</div>
+
+<div class="gallery-item">
+<img
+src="https://images.unsplash.com/photo-1511882150382-421056c89033?auto=format&fit=crop&w=1200&q=85"
+alt="Gaming gallery image 2">
+</div>
+
+<div class="gallery-item">
+<img
+src="https://images.unsplash.com/photo-1551103782-8ab07afd45c1?auto=format&fit=crop&w=1200&q=85"
+alt="Gaming gallery image 3">
+</div>
+
+<div class="gallery-item">
+<img
+src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?auto=format&fit=crop&w=1200&q=85"
+alt="Gaming gallery image 4">
+</div>
+
+<div class="gallery-item">
+<img
+src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&w=1200&q=85"
+alt="Gaming gallery image 5">
+</div>
+
+<div class="gallery-item">
+<img
+src="https://images.unsplash.com/photo-1592840496694-26d035b52b48?auto=format&fit=crop&w=1200&q=85"
+alt="Gaming gallery image 6">
+</div>
+
+<div class="gallery-item">
+<img
+src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?auto=format&fit=crop&w=1200&q=85"
+alt="Gaming gallery image 7">
+</div>
+
+<div class="gallery-item">
+<img
+src="https://images.unsplash.com/photo-1605899435973-ca2d1a8861cf?auto=format&fit=crop&w=1200&q=85"
+alt="Gaming gallery image 8">
+</div>
+
+</div>
+
+</section>
+
+
+<!-- UPDATES -->
+
+<section class="updates" id="updates">
+
+<div class="section-title">
+
+<small>NEWS</small>
+
+<h2>UPDATE CENTER</h2>
+
+<p>
+A section you can keep updating whenever Dueling Grounds receives
+new content or changes.
+</p>
+
+</div>
+
+<div class="update-list">
+
+
+<div class="update">
+
+<div class="update-date">2026</div>
 
 <div>
 
-<div class="badge">
-DUELLING GROUNDS • FAN HUB
-</div>
-
-<h1>GOJOKID37</h1>
+<h3>🚀 GOJOKID37 HUB EXPANSION</h3>
 
 <p>
-Think you know Duelling Grounds?
-Think again.
-
-This fan-made hub brings together combat fundamentals,
-movement, timing, prediction, ranked mindset,
-cosmetic information and beginner knowledge
-in one huge website.
+The website has been expanded with more sections,
+visuals, information and navigation.
 </p>
 
-<a class="btn"
+</div>
+
+</div>
+
+
+<div class="update">
+
+<div class="update-date">NEW</div>
+
+<div>
+
+<h3>📸 GALLERY ADDED</h3>
+
+<p>
+A dedicated gallery section gives the website a more visual
+and complete gaming-hub feel.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="update">
+
+<div class="update-date">NEXT</div>
+
+<div>
+
+<h3>🔧 MORE CONTENT COMING</h3>
+
+<p>
+Future updates can add new screenshots, game information,
+community content and announcements.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section class="faq" id="faq">
+
+<div class="section-title">
+
+<small>QUESTIONS</small>
+
+<h2>FREQUENTLY ASKED QUESTIONS</h2>
+
+</div>
+
+<div class="faq-grid">
+
+
+<details>
+
+<summary>What is this website?</summary>
+
+<p>
+This is the GOJOKID37 fan-made Dueling Grounds hub,
+created to collect gameplay-related information and updates.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Is this an official Roblox website?</summary>
+
+<p>
+No. This is a fan-made website created for GOJOKID37.
+Roblox and Dueling Grounds are separate from this website.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Can I play Dueling Grounds from this website?</summary>
+
+<p>
+Yes. Use the Play on Roblox buttons to open the game's
+Roblox page.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Will this website get bigger?</summary>
+
+<p>
+Yes. New sections, screenshots, guides and updates can be
+added to the site over time.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Can I add my own screenshots?</summary>
+
+<p>
+Yes. Upload your screenshots to your GitHub repository and
+replace the gallery image URLs with the new files.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Who is GOJOKID37?</summary>
+
+<p>
+GOJOKID37 is the Roblox player identity featured throughout
+this fan-made website.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+
+<!-- FINAL -->
+
+<section class="competition" id="compete">
+
+<div class="competition-content">
+
+<div class="badge">🏆 GOJOKID37</div>
+
+<h2>WELCOME TO THE HUB.</h2>
+
+<p>
+Explore. Practice. Improve. Adapt.
+Then come back and see how much you've progressed.
+</p>
+
+<div class="buttons">
+
+<a
+class="btn btn-primary"
 href="https://www.roblox.com/games/94217045453265/Dueling-Grounds"
-target="_blank"
-rel="noopener">
-🎮 PLAY DUELLING GROUNDS
+target="_blank">
+🎮 OPEN DUELING GROUNDS
+</a>
+
+<a
+class="btn btn-secondary"
+href="#top">
+⬆ BACK TO TOP
 </a>
 
 </div>
 
-
-<!-- UNIQUE HERO VISUAL -->
-
-<div class="visual">
-
-<svg viewBox="0 0 1200 650"
-xmlns="http://www.w3.org/2000/svg">
-
-<defs>
-
-<linearGradient id="heroGradient"
-x1="0" y1="0" x2="1" y2="1">
-
-<stop offset="0" stop-color="#061522"/>
-<stop offset=".5" stop-color="#0b3e55"/>
-<stop offset="1" stop-color="#05070b"/>
-
-</linearGradient>
-
-</defs>
-
-<rect width="1200" height="650"
-fill="url(#heroGradient)"/>
-
-<circle cx="950" cy="130"
-r="170"
-fill="#00bfff"
-opacity=".12"/>
-
-<circle cx="250" cy="500"
-r="220"
-fill="#ff4d9d"
-opacity=".07"/>
-
-<path d="M0 520 L600 300 L1200 520 V650 H0Z"
-fill="#0b1119"/>
-
-<path d="M120 520 L600 340 L1080 520"
-fill="none"
-stroke="#00bfff"
-stroke-width="5"
-opacity=".8"/>
-
-<path d="M300 520V260
-M900 520V260
-M300 260L600 150L900 260"
-fill="none"
-stroke="#8cecff"
-stroke-width="8"
-opacity=".5"/>
-
-<text x="600" y="120"
-text-anchor="middle"
-fill="white"
-font-size="58"
-font-family="Arial"
-font-weight="900">
-DUELLING GROUNDS
-</text>
-
-<text x="600" y="175"
-text-anchor="middle"
-fill="#8cecff"
-font-size="27"
-font-family="Arial">
-SKILL • TIMING • COMPETITION
-</text>
-
-<circle cx="460" cy="410"
-r="42"
-fill="#00bfff"/>
-
-<circle cx="740" cy="410"
-r="42"
-fill="#ff4d9d"/>
-
-<path d="M505 410H695"
-stroke="white"
-stroke-width="5"
-stroke-dasharray="16 14"/>
-
-</svg>
-
 </div>
 
 </section>
 
 
-<!-- ================= COMBAT ================= -->
-
-<section id="combat">
-
-<h2 class="title">⚔️ Combat Fundamentals</h2>
-
-<p class="sub">
-Understanding the flow of a fight is more important than simply acting constantly.
-</p>
-
-<div class="grid">
-
-
-<!-- ATTACK -->
-
-<div class="card">
-
-<div class="visual">
-
-<svg viewBox="0 0 800 450"
-xmlns="http://www.w3.org/2000/svg">
-
-<rect width="800" height="450"
-fill="#080c13"/>
-
-<circle cx="220" cy="225"
-r="100"
-fill="#00bfff"
-opacity=".12"/>
-
-<circle cx="580" cy="225"
-r="100"
-fill="#ff4d9d"
-opacity=".12"/>
-
-<circle cx="220" cy="225"
-r="38"
-fill="#00bfff"/>
-
-<circle cx="580" cy="225"
-r="38"
-fill="#ff4d9d"/>
-
-<path d="M270 225H530"
-stroke="white"
-stroke-width="6"
-stroke-dasharray="15 12"/>
-
-<text x="400" y="70"
-text-anchor="middle"
-fill="white"
-font-size="42"
-font-family="Arial"
-font-weight="900">
-ATTACK AWARENESS
-</text>
-
-</svg>
-
-</div>
-
-<div class="body">
-
-<h3>⚔️ Attack Awareness</h3>
-
-<p>
-Don't act automatically. Pay attention to spacing,
-openings and what your opponent is doing.
-</p>
-
-</div>
-</div>
-
-
-<!-- DEFENSE -->
-
-<div class="card">
-
-<div class="visual">
-
-<svg viewBox="0 0 800 450"
-xmlns="http://www.w3.org/2000/svg">
-
-<rect width="800" height="450"
-fill="#080b11"/>
-
-<circle cx="400" cy="225"
-r="125"
-fill="#00bfff"
-opacity=".08"/>
-
-<circle cx="400" cy="225"
-r="90"
-fill="none"
-stroke="#00bfff"
-stroke-width="8"/>
-
-<path d="M270 225H530"
-stroke="#8cecff"
-stroke-width="8"/>
-
-<path d="M400 95V355"
-stroke="#8cecff"
-stroke-width="8"/>
-
-<text x="400" y="60"
-text-anchor="middle"
-fill="white"
-font-size="42"
-font-family="Arial"
-font-weight="900">
-DEFENSE
-</text>
-
-</svg>
-
-</div>
-
-<div class="body">
-
-<h3>🛡️ Defensive Awareness</h3>
-
-<p>
-Defensive decisions are about staying calm,
-recognizing pressure and choosing the right response.
-</p>
-
-</div>
-</div>
-
-
-<!-- TIMING -->
-
-<div class="card">
-
-<div class="visual">
-
-<svg viewBox="0 0 800 450"
-xmlns="http://www.w3.org/2000/svg">
-
-<rect width="800" height="450"
-fill="#090c13"/>
-
-<circle cx="400" cy="230"
-r="125"
-fill="none"
-stroke="#28394b"
-stroke-width="8"/>
-
-<line x1="400" y1="230"
-x2="400" y2="130"
-stroke="#00bfff"
-stroke-width="8"/>
-
-<line x1="400" y1="230"
-x2="480" y2="275"
-stroke="#ff4d9d"
-stroke-width="8"/>
-
-<circle cx="400" cy="230"
-r="16"
-fill="white"/>
-
-<text x="400" y="60"
-text-anchor="middle"
-fill="white"
-font-size="42"
-font-family="Arial"
-font-weight="900">
-TIMING
-</text>
-
-</svg>
-
-</div>
-
-<div class="body">
-
-<h3>⏱️ Timing</h3>
-
-<p>
-Good timing can completely change an interaction.
-Avoid rushing decisions just because the fight is moving quickly.
-</p>
-
-</div>
-</div>
-
-</div>
-</section>
-
-
-<!-- ================= MOVEMENT ================= -->
-
-<section id="movement">
-
-<h2 class="title">🏃 Movement & Positioning</h2>
-
-<p class="sub">
-Movement changes spacing, positioning and how predictable your decisions become.
-</p>
-
-<div class="grid">
-
-
-<div class="card">
-
-<div class="visual">
-
-<svg viewBox="0 0 800 450"
-xmlns="http://www.w3.org/2000/svg">
-
-<rect width="800" height="450"
-fill="#070b11"/>
-
-<path d="M100 350
-C180 100 300 100 400 250
-C500 400 620 350 700 100"
-fill="none"
-stroke="#00bfff"
-stroke-width="10"
-stroke-dasharray="22 18"/>
-
-<circle cx="100" cy="350"
-r="25" fill="#00bfff"/>
-
-<circle cx="700" cy="100"
-r="25" fill="#ff4d9d"/>
-
-<text x="400" y="65"
-text-anchor="middle"
-fill="white"
-font-size="42"
-font-family="Arial"
-font-weight="900">
-MOVEMENT
-</text>
-
-</svg>
-
-</div>
-
-<div class="body">
-
-<h3>🏃 Movement</h3>
-
-<p>
-Purposeful movement helps control spacing and makes
-your decisions less predictable.
-</p>
-
-</div>
-</div>
-
-
-<div class="card">
-
-<div class="visual">
-
-<svg viewBox="0 0 800 450"
-xmlns="http://www.w3.org/2000/svg">
-
-<rect width="800" height="450"
-fill="#090d14"/>
-
-<circle cx="400" cy="230"
-r="150"
-fill="none"
-stroke="#24384b"
-stroke-width="5"/>
-
-<circle cx="400" cy="230"
-r="90"
-fill="none"
-stroke="#00bfff"
-stroke-width="5"/>
-
-<circle cx="400" cy="230"
-r="28"
-fill="#ff4d9d"/>
-
-<text x="400" y="65"
-text-anchor="middle"
-fill="white"
-font-size="42"
-font-family="Arial"
-font-weight="900">
-SPACING
-</text>
-
-</svg>
-
-</div>
-
-<div class="body">
-
-<h3>📐 Spacing</h3>
-
-<p>
-Understanding distance helps you make better decisions
-instead of constantly moving without a purpose.
-</p>
-
-</div>
-</div>
-
-
-<div class="card">
-
-<div class="visual">
-
-<svg viewBox="0 0 800 450"
-xmlns="http://www.w3.org/2000/svg">
-
-<rect width="800" height="450"
-fill="#080b12"/>
-
-<path d="M160 300
-L300 160
-L440 300
-L580 160
-L700 300"
-fill="none"
-stroke="#00bfff"
-stroke-width="10"/>
-
-<circle cx="160" cy="300"
-r="25" fill="white"/>
-
-<circle cx="700" cy="300"
-r="25" fill="#ff4d9d"/>
-
-<text x="400" y="70"
-text-anchor="middle"
-fill="white"
-font-size="42"
-font-family="Arial"
-font-weight="900">
-UNPREDICTABILITY
-</text>
-
-</svg>
-
-</div>
-
-<div class="body">
-
-<h3>🌀 Mix It Up</h3>
-
-<p>
-Repeating exactly the same movement pattern makes you
-easier to anticipate.
-</p>
-
-</div>
-</div>
-
-</div>
-</section>
-
-
-<!-- ================= CONTROLS ================= -->
-
-<section id="controls">
-
-<h2 class="title">🎮 PC Controls</h2>
-
-<p class="sub">
-These are the game's listed PC inputs; controls can be changed in settings.
-</p>
-
-<div class="tablewrap">
-
-<table>
-
-<tr>
-<th>Action</th>
-<th>Default Input</th>
-<th>Purpose</th>
-</tr>
-
-<tr>
-<td>Light Attack</td>
-<td>M1</td>
-<td>Basic attack</td>
-</tr>
-
-<tr>
-<td>Heavy Attack</td>
-<td>M2</td>
-<td>Heavy attack</td>
-</tr>
-
-<tr>
-<td>Parry / Block</td>
-<td>F</td>
-<td>Defensive input</td>
-</tr>
-
-<tr>
-<td>Dodge</td>
-<td>Q / Shift</td>
-<td>Evasive movement</td>
-</tr>
-
-<tr>
-<td>Lock Enemy</td>
-<td>M3 / T</td>
-<td>Target lock</td>
-</tr>
-
-<tr>
-<td>Mouse Lock</td>
-<td>Ctrl</td>
-<td>Mouse lock</td>
-</tr>
-
-<tr>
-<td>Jump</td>
-<td>Space</td>
-<td>Jump</td>
-</tr>
-
-<tr>
-<td>Ultimate</td>
-<td>R</td>
-<td>Ultimate ability</td>
-</tr>
-
-</table>
-
-</div>
-
-</section>
-
-
-<!-- ================= TIPS ================= -->
-
-<section id="tips">
-
-<h2 class="title">🧠 Things That Can Change a Fight</h2>
-
-<p class="sub">
-The small decisions are often what separate random play from deliberate play.
-</p>
-
-<div class="grid">
-
-
-<!-- PARRY -->
-
-<div class="card">
-
-<div class="visual">
-
-<svg viewBox="0 0 800 450"
-xmlns="http://www.w3.org/2000/svg">
-
-<rect width="800" height="450"
-fill="#080b12"/>
-
-<path d="M130 225H670"
-stroke="#28394b"
-stroke-width="7"/>
-
-<path d="M300 225
-C350 120 450 120 500 225"
-fill="none"
-stroke="#00bfff"
-stroke-width="12"/>
-
-<circle cx="400" cy="225"
-r="40"
-fill="#ff4d9d"/>
-
-<text x="400" y="65"
-text-anchor="middle"
-fill="white"
-font-size="42"
-font-family="Arial"
-font-weight="900">
-PARRY TIMING
-</text>
-
-</svg>
-
-</div>
-
-<div class="body">
-
-<h3>🛡️ Parry Timing</h3>
-
-<p>
-Don't panic. Watch the opponent's action and make
-your defensive response deliberately.
-</p>
-
-</div>
-</div>
-
-
-<!-- PREDICTION -->
-
-<div class="card">
-
-<div class="visual">
-
-<svg viewBox="0 0 800 450"
-xmlns="http://www.w3.org/2000/svg">
-
-<rect width="800" height="450"
-fill="#080b12"/>
-
-<circle cx="400" cy="225"
-r="105"
-fill="none"
-stroke="#00bfff"
-stroke-width="8"/>
-
-<path d="M400 120V225L475 275"
-stroke="white"
-stroke-width="8"
-fill="none"/>
-
-<text x="400" y="65"
-text-anchor="middle"
-fill="white"
-font-size="42"
-font-family="Arial"
-font-weight="900">
-PREDICTION
-</text>
-
-</svg>
-
-</div>
-
-<div class="body">
-
-<h3>🎯 Prediction</h3>
-
-<p>
-If an opponent repeatedly makes the same choice,
-you can start recognizing the pattern.
-</p>
-
-</div>
-</div>
-
-
-<!-- PATIENCE -->
-
-<div class="card">
-
-<div class="visual">
-
-<svg viewBox="0 0 800 450"
-xmlns="http://www.w3.org/2000/svg">
-
-<rect width="800" height="450"
-fill="#090c13"/>
-
-<circle cx="400" cy="230"
-r="120"
-fill="none"
-stroke="#27394b"
-stroke-width="9"/>
-
-<line x1="400" y1="230"
-x2="400" y2="145"
-stroke="#00bfff"
-stroke-width="8"/>
-
-<line x1="400" y1="230"
-x2="465" y2="270"
-stroke="#ff4d9d"
-stroke-width="8"/>
-
-<text x="400" y="65"
-text-anchor="middle"
-fill="white"
-font-size="42"
-font-family="Arial"
-font-weight="900">
-PATIENCE
-</text>
-
-</svg>
-
-</div>
-
-<div class="body">
-
-<h3>⏳ Patience</h3>
-
-<p>
-Sometimes waiting gives you more information than
-immediately forcing an interaction.
-</p>
-
-</div>
-</div>
-
-
-<!-- ADAPTATION -->
-
-<div class="card">
-
-<div class="visual">
-
-<svg viewBox="0 0 800 450"
-xmlns="http://www.w3.org/2000/svg">
-
-<rect width="800" height="450"
-fill="#080c12"/>
-
-<path d="M180 320
-L300 190
-L400 270
-L520 140
-L650 240"
-fill="none"
-stroke="#00bfff"
-stroke-width="10"/>
-
-<path d="M620 180
-L680 240
-L620 300"
-fill="none"
-stroke="#ff4d9d"
-stroke-width="10"/>
-
-<text x="400" y="65"
-text-anchor="middle"
-fill="white"
-font-size="42"
-font-family="Arial"
-font-weight="900">
-ADAPTATION
-</text>
-
-</svg>
-
-</div>
-
-<div class="body">
-
-<h3>🔄 Adaptation</h3>
-
-<p>
-If your current approach isn't working, change it.
-Repeating the same mistake teaches your opponent your pattern.
-</p>
-
-</div>
-</div>
-
-
-<!-- REACTIONS -->
-
-<div class="card">
-
-<div class="visual">
-
-<svg viewBox="0 0 800 450"
-xmlns="http://www.w3.org/2000/svg">
-
-<rect width="800" height="450"
-fill="#070b11"/>
-
-<circle cx="400" cy="230"
-r="115"
-fill="#00bfff"
-opacity=".08"/>
-
-<path d="M340 190
-L400 250
-L500 130"
-fill="none"
-stroke="#00bfff"
-stroke-width="18"
-stroke-linecap="round"
-stroke-linejoin="round"/>
-
-<text x="400" y="65"
-text-anchor="middle"
-fill="white"
-font-size="42"
-font-family="Arial"
-font-weight="900">
-REACTIONS
-</text>
-
-</svg>
-
-</div>
-
-<div class="body">
-
-<h3>⚡ Reactions</h3>
-
-<p>
-Fast reactions help, but understanding what you're
-reacting to is just as important.
-</p>
-
-</div>
-</div>
-
-
-<!-- JUMPING -->
-
-<div class="card">
-
-<div class="visual">
-
-<svg viewBox="0 0 800 450"
-xmlns="http://www.w3.org/2000/svg">
-
-<rect width="800" height="450"
-fill="#080c12"/>
-
-<path d="M150 350H650"
-stroke="#26394b"
-stroke-width="8"/>
-
-<circle cx="400" cy="190"
-r="42"
-fill="#00bfff"/>
-
-<path d="M400 235V340"
-stroke="#00bfff"
-stroke-width="10"/>
-
-<path d="M330 180
-Q400 70 470 180"
-fill="none"
-stroke="#ff4d9d"
-stroke-width="8"
-stroke-dasharray="15 12"/>
-
-<text x="400" y="65"
-text-anchor="middle"
-fill="white"
-font-size="42"
-font-family="Arial"
-font-weight="900">
-JUMPING
-</text>
-
-</svg>
-
-</div>
-
-<div class="body">
-
-<h3>🦘 Jumping</h3>
-
-<p>
-Jumping changes your position and can make your
-movement less predictable.
-</p>
-
-</div>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= ADVANCED ================= -->
-
-<section>
-
-<div class="callout">
-
-<h2>🔥 Advanced Mindset</h2>
-
-<p>
-<strong>
-DON'T JUST REACT — READ THE PATTERN.
-</strong>
-</p>
-
-<p>
-Watch habits, spacing, hesitation, timing and repeated
-decisions. When the opponent changes their approach,
-your response should change too.
-</p>
-
-<div class="pills">
-
-<span class="pill">Timing</span>
-<span class="pill">Spacing</span>
-<span class="pill">Prediction</span>
-<span class="pill">Patience</span>
-<span class="pill">Adaptation</span>
-<span class="pill">Awareness</span>
-<span class="pill">Positioning</span>
-<span class="pill">Consistency</span>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= COSMETICS ================= -->
-
-<section id="cosmetics">
-
-<h2 class="title">✨ Cosmetics & Style</h2>
-
-<p class="sub">
-Cosmetics are about how your character looks and the style you want to represent.
-They don't replace game knowledge, timing or decision-making.
-</p>
-
-<div class="cosmetics">
-
-<div class="cosmetic">
-<div class="cosmetic-icon">✨</div>
-<h3>Visual Style</h3>
-<p>
-Choose a look that fits your personal style.
-</p>
-</div>
-
-<div class="cosmetic">
-<div class="cosmetic-icon">🎨</div>
-<h3>Color Themes</h3>
-<p>
-Different color combinations can give your character a distinct appearance.
-</p>
-</div>
-
-<div class="cosmetic">
-<div class="cosmetic-icon">👤</div>
-<h3>Character Identity</h3>
-<p>
-Your cosmetic choices can make your character recognizable.
-</p>
-</div>
-
-<div class="cosmetic">
-<div class="cosmetic-icon">🔥</div>
-<h3>Personal Style</h3>
-<p>
-The coolest look is ultimately the one that matches your own style.
-</p>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= RANKED ================= -->
-
-<section id="ranked">
-
-<h2 class="title">🏆 Ranked Mindset</h2>
-
-<p class="sub">
-Ranked play is about consistency, learning and adapting.
-</p>
-
-<div class="grid">
-
-<div class="card">
-
-<div class="visual">
-
-<svg viewBox="0 0 800 450"
-xmlns="http://www.w3.org/2000/svg">
-
-<rect width="800" height="450"
-fill="#080b11"/>
-
-<path d="M180 350
-L300 150
-H500
-L620 350Z"
-fill="#101c29"
-stroke="#00bfff"
-stroke-width="7"/>
-
-<text x="400" y="260"
-text-anchor="middle"
-fill="white"
-font-size="65"
-font-family="Arial"
-font-weight="900">
-RANKED
-</text>
-
-<text x="400" y="310"
-text-anchor="middle"
-fill="#00bfff"
-font-size="25"
-font-family="Arial">
-LEARN • CLIMB • IMPROVE
-</text>
-
-</svg>
-
-</div>
-
-<div class="body">
-
-<h3>📈 Consistency</h3>
-
-<p>
-Focus on making repeatable decisions instead of
-trying to win every situation with a risky move.
-</p>
-
-</div>
-</div>
-
-
-<div class="card">
-
-<div class="body">
-
-<h3>🧠 Learn From Losses</h3>
-
-<p>
-After a match, identify one decision you could have
-handled differently. One useful lesson is better than
-simply blaming the opponent.
-</p>
-
-</div>
-</div>
-
-
-<div class="card">
-
-<div class="body">
-
-<h3>🎯 Stay Adaptable</h3>
-
-<p>
-Every opponent can create a different problem.
-Don't force one strategy into every situation.
-</p>
-
-</div>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= BEGINNER ================= -->
-
-<section>
-
-<h2 class="title">❌ Beginner Mistakes</h2>
-
-<p class="sub">
-Avoiding these habits can make improvement much easier.
-</p>
-
-<div class="grid">
-
-<div class="card">
-
-<div class="body">
-
-<h3>❌ Panic Attacking</h3>
-
-<p>
-Constant action can make your decisions predictable.
-Take moments to observe.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="card">
-
-<div class="body">
-
-<h3>❌ Ignoring Movement</h3>
-
-<p>
-Positioning matters. Standing in the same place can
-make spacing easier for the opponent to control.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="card">
-
-<div class="body">
-
-<h3>❌ No Adaptation</h3>
-
-<p>
-If something isn't working, change your approach
-instead of repeating it.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="card">
-
-<div class="body">
-
-<h3>❌ Rushing</h3>
-
-<p>
-A rushed decision can turn a manageable situation
-into a difficult one.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= FINAL ================= -->
-
-<section id="compete">
-
-<div class="visual">
-
-<svg viewBox="0 0 1200 600"
-xmlns="http://www.w3.org/2000/svg">
-
-<defs>
-
-<linearGradient id="finalGradient"
-x1="0" y1="0"
-x2="1" y2="1">
-
-<stop stop-color="#071b2b"/>
-<stop offset=".5" stop-color="#0b3347"/>
-<stop offset="1" stop-color="#07090e"/>
-
-</linearGradient>
-
-</defs>
-
-<rect width="1200" height="600"
-fill="url(#finalGradient)"/>
-
-<circle cx="600" cy="280"
-r="190"
-fill="none"
-stroke="#00bfff"
-stroke-width="6"
-opacity=".5"/>
-
-<circle cx="600" cy="280"
-r="120"
-fill="none"
-stroke="#ff4d9d"
-stroke-width="4"
-opacity=".6"/>
-
-<text x="600" y="220"
-text-anchor="middle"
-fill="white"
-font-size="65"
-font-family="Arial"
-font-weight="900">
-GOJOKID37
-</text>
-
-<text x="600" y="280"
-text-anchor="middle"
-fill="#8cecff"
-font-size="30"
-font-family="Arial">
-STEP IN • STAY SHARP
-</text>
-
-<text x="600" y="330"
-text-anchor="middle"
-fill="#b9c6d6"
-font-size="25"
-font-family="Arial">
-LEARN • ADAPT • HAVE FUN
-</text>
-
-</svg>
-
-</div>
-
-
-<div class="callout" style="margin-top:25px">
-
-<h2>🏆 COMPETE WITH GOJOKID37</h2>
-
-<p>
-Think you're ready?
-
-Take what you've learned, step into the arena,
-stay respectful and keep improving.
-</p>
-
-<a class="btn"
-href="https://www.roblox.com/games/94217045453265/Dueling-Grounds"
-target="_blank"
-rel="noopener">
-⚔️ ENTER DUELLING GROUNDS
-</a>
-
-</div>
-
-</section>
-
+<!-- FOOTER -->
 
 <footer>
 
-© 2026 Gojokid37 • Duelling Grounds Fan Website
+<div class="footer-grid">
 
-<br>
 
-Fan-made website. Not affiliated with Roblox or the game's creators.
+<div>
+
+<h3>GOJOKID37</h3>
+
+<p>
+A fan-made Dueling Grounds hub featuring gameplay information,
+movement, awareness, progression, screenshots and updates.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Explore</h3>
+
+<p><a href="#about">About</a></p>
+<p><a href="#movement">Movement</a></p>
+<p><a href="#awareness">Awareness</a></p>
+<p><a href="#progress">Progression</a></p>
+
+</div>
+
+
+<div>
+
+<h3>More</h3>
+
+<p><a href="#gallery">Gallery</a></p>
+<p><a href="#updates">Updates</a></p>
+<p><a href="#faq">FAQ</a></p>
+
+</div>
+
+
+</div>
+
+<div class="footer-bottom">
+
+© 2026 GOJOKID37 • Fan-made website • Roblox / Dueling Grounds
+
+</div>
 
 </footer>
 
